@@ -11,7 +11,7 @@
 	& .blog-title h3 {
 		margin-top: 0;
 		margin-bottom: 0;
-		font-weight: 200;
+		font-weight: lighter;
 		font-size: 30px;
 		text-transform: uppercase;
 
@@ -51,7 +51,7 @@
 
 		& h4 {
 			text-transform: uppercase;
-			font-weight: 200;
+			font-weight: lighter;
 			margin: 0;
 			font-size: 25px;
 			margin-bottom: 15px;

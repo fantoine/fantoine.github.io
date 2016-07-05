@@ -1,6 +1,9 @@
 body {
 	background: url('../img/body-bg.png') repeat;
 	color: #343434;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -269,7 +272,7 @@ label {
 	color: #343434;
 	text-transform: uppercase;
 	font-size: 18px;
-	font-weight: 200;
+	font-weight: lighter;
 	padding-left: 20px;
 	padding-right: 20px
 }
@@ -431,7 +434,7 @@ margin-top: 0;
 
 margin-bottom: 0;
 
-font-weight: 200;
+font-weight: lighter;
 
 font-size: 30px;
 
@@ -492,7 +495,7 @@ color: #2B8ABF
 
 text-transform: uppercase;
 
-font-weight: 200;
+font-weight: lighter;
 
 margin: 0;
 
@@ -680,7 +683,7 @@ padding-top: 0
 }
 .section-projects .project-item > h4 {
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: lighter;
     margin: 0;
     font-size: 25px;
     margin-bottom: 15px
@@ -721,7 +724,7 @@ padding-top: 0
 .section-projects .project-title h3 {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 200;
+    font-weight: lighter;
     font-size: 30px;
     text-transform: uppercase
 }

@@ -18,9 +18,7 @@ permalink:  /blog/
                     <li><i class="fa fa-fw fa-calendar"></i> <a href="#">{{ post.date | date: "%B %-d, %Y" }}</a></li>
                     <li><i class="fa fa-fw fa-user"></i> <a href="#">Fabien Antoine</a></li>
                     <li><i class="fa fa-fw fa-folder-open"></i> {{ post.category }}</li>
-                    {% if post.tags != nil and post.tags.length > 0 %}
-                    <li><i class="fa fa-fw fa-tags"></i> {{ post.tags | join: ', ' }}</li>
-                    {% endif %}
+                    {% if post.tags != nil and post.tags.length > 0 %}<li><i class="fa fa-fw fa-tags"></i> {{ post.tags | join: ', ' }}</li>{% endif %}
                 </ul>
             </div>
             <div class="blog-col blog-col-content col-md-10">

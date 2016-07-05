@@ -1,15 +1,28 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
-
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-</article>
+<section class="section section-blog">
+    <article class="blog-article" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <h4 itemprop="name headline">{{ page.title }}</h4>
+            </div>
+        </header>
+        <div class="blog-row row">
+            <div class="blog-col blog-col-details col-md-2">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-fw fa-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time></li>
+                    <li><i class="fa fa-fw fa-user"></i> Fabien Antoine</li>
+                    <li><i class="fa fa-fw fa-folder-open"></i> {{ page.category }}</li>
+                    {% if post.tags != nil and post.tags.length > 0 %}<li><i class="fa fa-fw fa-tags"></i> {{ post.tags | join: ', ' }}</li>{% endif %}
+                    {% comment %}<li><i class="fa fa-fw fa-comments"></i> <a href="#">0 comment</a></li>{% endcomment %}
+                </ul>
+            </div>
+            <div class="blog-col blog-col-content col-md-10" itemprop="articleBody">
+                <img src="{{ site.baseUrl }}/img/posts/{{ page.slug }}/thumbnail.png" class="blog-image img-responsive img-thumbnail" alt="{{ page.title }}" />
+                {{ content }}
+            </div>
+        </div>
+    </article>
+</section>
