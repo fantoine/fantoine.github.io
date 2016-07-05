@@ -1,0 +1,223 @@
+.section-tutorials {
+    .tutorials {
+        .make-row();
+    }
+
+    .tutorial-item {
+        .make-sm-column(6);
+        .make-md-column(4);
+        .clearfix();
+
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        > img {
+            .img-thumbnail();
+            .img-responsive();
+            .center-block();
+
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            float: left;
+
+            .transition(background 0.5s);
+        }
+
+        > h4 {
+            text-transform: uppercase;
+            font-weight: lighter;
+            margin: 0;
+            font-size: 25px;
+            margin-bottom: 15px;
+
+            a {
+                color: @color-grey;
+
+                .transition(color 0.5s);
+            }
+        }
+
+        > ul {
+            font-size: 12px;
+            margin: 0 0 15px 0;
+            color: @color-blue;
+
+            .list-inline();
+        }
+
+        &:hover {
+            > h4 a {
+                color: @color-blue; 
+            }
+        }
+
+        @media screen and (min-width: @screen-sm) {
+            > img {
+                margin-right: auto;
+                float: none;
+                width: auto;
+            }
+
+            > h4 {
+                text-align: center;
+            }
+
+            > ul {
+                text-align: center;
+            }
+        }
+    }
+
+    .tutorial-article {
+        margin-bottom: 50px;
+
+        h4 {
+            text-transform: uppercase;
+            font-weight: lighter;
+            margin: 0;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .tutorial-row {
+            .make-row();
+        }
+
+        .tutorial-col-details {
+            .make-md-column(2);
+
+            ul {
+                font-size: 12px;
+                margin: 0;
+                color: @color-blue;
+
+                .list-unstyled();
+
+                & > li {
+                    display: inline-block;
+                    margin-right: 15px;
+                }
+            }
+        }
+        .tutorial-col-content {
+            padding-top: 0;
+
+            .make-md-column(10);
+
+            .tutorial-image {
+                margin-bottom: 15px;
+
+                .img-thumbnail();
+                .img-responsive();
+            }
+            p {
+                text-indent: 2em;
+            }
+        }
+
+        .tutorial-row-no-details .tutorial-col-content {
+            .make-md-column(12);
+        }
+
+        .search-form {
+            .form-inline();
+        }
+    }
+
+    .tutorial-title  {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px dashed @color-blue;
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: lighter;
+            font-size: 30px;
+            text-transform: uppercase;
+
+            span {
+                color: @color-blue;
+                text-transform: none;
+            }
+        }
+    }
+
+    .tutorial-summary {
+        margin-top: 15px;
+
+        h5 {
+            background-color: @color-blue;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 0;
+            border-radius: 10px;
+        }
+
+        .summary {
+            .list-unstyled();
+            position: relative;
+            counter-reset: tutorial-counter;
+            
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: @color-blue;
+                border-radius: 50%;
+                left: 28px;
+                bottom: 0px;
+                width: 5px;
+                height: 5px;
+            }
+
+            li {
+                position: relative;
+                margin-left: 30px;
+                border-left: 1px solid @color-blue;
+                padding: 14px 20px;
+
+                &:before {
+                    content: counter(tutorial-counter);
+                    counter-increment: tutorial-counter;
+                    display: block;
+                    position: absolute;
+                    left: -15px;
+                    top: 9px;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 28px;
+                    text-align: center;
+                    vertical-align: middle;
+                    background-color: #ffffff;
+                    color: @color-blue;
+                    border: 1px solid @color-blue;
+                    border-radius: 50%;
+                }
+
+                &.active {
+                    font-weight: bold;
+
+                    &:before {
+                        background-color: @color-blue;
+                        color: white;
+                    }
+                }
+
+                &:last-child {
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+}

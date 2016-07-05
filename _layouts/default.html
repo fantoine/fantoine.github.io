@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="container">
+      {% include header.html %}
+      {% include nav.html %}
+      {{ content }}
+      {% include footer.html %}
     </div>
-
-    {% include footer.html %}
-
+    <img class="footer-icon" src="{{ site.baseUrl }}/img/logo.png" alt="fantoine.com" />
   </body>
-
 </html>

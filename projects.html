@@ -1,0 +1,29 @@
+---
+layout:     default
+title:      Projects
+permalink:  /projects/
+---
+
+<section class="section section-projects">
+{% if site.data.projects.size > 0 %}
+    <div class="projects row">
+        {% for project_data in site.data.projects %}
+            {% assign project_slug = project_data[0] %}
+            {% assign project = project_data[1] %}
+            <div class="project-item col-sm-6 col-md-4 clearfix">
+                <h4>{{ project.title }}</h4>
+                <img src="{{ site.baseUrl }}/img/projects/{{ project_slug }}/thumbnail.png" }}" class="img-thumbnail img-responsive center-block" />
+                <ul class="list-unstyled list-inline">
+                    <li><i class="fa fa-fw fa-asterisk"></i> {{ project.targets | join: ', ' }}</li>
+                    <li><i class="fa fa-fw fa-slack"></i> {{ project.technologies | join: ', ' }}</li>
+                    <li><i class="fa fa-fw fa-folder-open"></i> {{ project.category }}</li>
+                    <li><i class="fa fa-fw fa-link"></i> <a href="{{ project.url }}">{{ project.url }}</a></li>
+                </ul>
+                <p>{{ project.excerpt }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>There are no projects.</p>
+{% endif %}
+</section>

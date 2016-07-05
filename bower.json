@@ -1,0 +1,23 @@
+{
+  "name": "fantoine.com",
+  "version": "2.0.0",
+  "description": "fantoine.com website",
+  "main": ".js",
+  "authors": [
+    "Fabien Antoine <fabien@fantoine.fr>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "^3.3"
+  }
+}

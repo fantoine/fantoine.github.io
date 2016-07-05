@@ -1,0 +1,120 @@
+@custom-media --screen-sm (min-width: 768px);
+
+body {
+	background: url('../img/body-bg.png') repeat;
+	color: var(--color-grey);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="socicon-"],
+[class*=" socicon-"] {
+  	vertical-align: middle;
+}
+
+.container {
+	background: white url('../img/container-bg.png') repeat;
+	padding: 0;
+	margin-bottom: 20px;
+
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+.footer-icon {
+	max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.btn-fantoine {
+	/*.button-variant(#FFF; var(--color-blue); var(--color-grey-light);*/
+	color: #FFF;
+	background-color: var(--color-blue);
+	border-color: var(--color-grey-light);
+
+	&:focus,
+	&.focus {
+		color: #FFF;
+		background-color: color(var(--color-blue) blackness(25%));
+		border-color: color(var(--color-grey-light) blackness(50%));
+	}
+	&:hover {
+		color: #FFF;
+		background-color: color(var(--color-blue) blackness(25%));
+		border-color: color(var(--color-grey-light) blackness(30%));
+	}
+	&:active,
+	&.active,
+	& .open > .dropdown-toggle & {
+		color: #FFF;
+		background-color: color(var(--color-blue) blackness(25%));
+		border-color: color(var(--color-grey-light) blackness(30%));
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: #FFF;
+			background-color: color(var(--color-blue) blackness(35%));
+			border-color: color(var(--color-grey-light) blackness(50%));
+		}
+	}
+	&:active,
+	&.active,
+	& .open > .dropdown-toggle& {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	& fieldset[disabled] & {
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: var(--color-blue);
+			border-color: var(--color-grey-light);
+		}
+  	}
+
+	& .badge {
+		color: var(--color-blue);
+		background-color: #FFF;
+	}
+}
+.progress-bar-fantoine {
+	border-radius: 4px;
+
+	/*.progress-bar-variant(@color-blue);*/
+}
+.label-fantoine {
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+
+	/*.label-variant(@color-blue);*/
+}
+
+a {
+	color:var(--color-blue);
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+label {
+	font-weight: lighter;
+	text-transform: uppercase;
+	color: var(--color-grey);
+}
+
+@media (--screen-sm) {
+	.container {
+		margin-top: 50px;
+	}
+
+	.footer-icon {
+		margin-bottom: 50px;
+	}
+}

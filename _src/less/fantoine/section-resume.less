@@ -1,0 +1,160 @@
+.section-resume {
+	.resume-row {
+		margin-bottom: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.resume-col-title {
+			padding-bottom: 20px;
+
+			h4 {
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: lighter;
+				margin: 0;
+				font-size: 25px;
+			}
+		}
+		.resume-col-content {
+			padding-top: 20px;
+			border-top: 1px dashed @color-blue;
+		}
+
+		.resume-entries, .resume-skills {
+			h5 {
+				font-size: 20px;
+				margin-top: 0;
+
+				.label {
+					display: block;
+					margin-top: 10px;
+				}
+			}
+			h6 {
+				margin-top: 0;
+				text-transform: uppercase;
+				font-size: 16px;
+				font-weight: lighter;
+				color: @color-blue;
+
+				a {
+					text-decoration: underline;
+					color: @color-blue;
+
+					&:hover, &:focus {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.resume-entries {
+			.resume-entry {
+				margin-bottom: 50px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				& > ul {
+					margin: 0 30px;
+					text-align: justify;
+
+					.list-unstyled();
+
+					li {
+						margin-bottom: 10px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+					span {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		.resume-skills {
+			padding: 0 15px; 
+			margin-bottom: 50px;
+
+			.progress-skill {
+				height: 30px;
+				margin-bottom: 10px;
+				background-color: @color-grey-light;
+
+				.progress-bar {
+					line-height: 30px;
+					text-align: left;
+					padding-left: 15px;
+					font-size: 16px;
+					white-space: nowrap;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+				}
+			}
+			/*
+			.resume-skill-rule {
+				.list-unstyled();
+				.clearfix();
+
+				li {
+					display: block;
+					float: left;
+					width: 25%;
+					padding: 0;
+					margin: 0;
+					text-indent: 9999em;
+					line-height: 10px;
+					border-left: 1px solid @color-grey;
+
+					&:last-child {
+						border-right: 1px solid @color-grey;
+					}
+				}
+			}
+			*/
+		}
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	.section-resume {
+		.resume-row {
+			.resume-col-title {
+				padding-right: 30px;
+				padding-bottom: 0;
+
+				h4 {
+					text-align: right;
+				}
+			}
+			.resume-col-content {
+				padding-left: 30px;
+				padding-top: 0;
+				border-top: none;
+				border-left: 1px dashed @color-blue;
+			}
+		}
+	}
+}
+@media (min-width: @screen-sm-min) {
+	.section-resume {
+		.resume-row {
+			.resume-entries {
+				h5 {
+					.label {
+						margin-top: 0;
+
+						.pull-right();
+					}
+				}
+			}
+
+			.resume-skills {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

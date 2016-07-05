@@ -1,0 +1,35 @@
+---
+layout:     default
+title:      Blog
+permalink:  /blog/
+---
+
+<section class="section section-blog">
+    {% for post in site.posts %}
+    <article class="blog-article">
+        <header class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <h4><a href="{{ post.url | prepend: site.baseUrl }}">{{ post.title }}</a></h4>
+            </div>
+        </header>
+        <div class="blog-row row">
+            <div class="blog-col blog-col-details col-md-2">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-fw fa-calendar"></i> <a href="#">{{ post.date | date: "%B %-d, %Y" }}</a></li>
+                    <li><i class="fa fa-fw fa-user"></i> <a href="#">Fabien Antoine</a></li>
+                    <li><i class="fa fa-fw fa-folder-open"></i> {{ post.category }}</li>
+                    {% if post.tags != nil and post.tags.length > 0 %}
+                    <li><i class="fa fa-fw fa-tags"></i> {{ post.tags | join: ', ' }}</li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="blog-col blog-col-content col-md-10">
+                <img src="{{ site.baseUrl }}/img/posts/{{ post.slug }}/thumbnail.png" class="blog-image img-responsive img-thumbnail" alt="{{ post.title }}" />
+                <p>
+                  jerryfergusonphotography Hello, I'm Lorem ipsum dolor sit amet, conseur adipiscing elit puella magna est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc diam leo, ornare vulputate placerat luctus, sollicitudin id massa. Morbi elementum justo id lorem tempus. Nulla massa arcu, egestas at tincidunt placerat, luctus vel orci. Quisque non sollicitudin orci. Pellentesque lobortis rhoncus metus,...
+                </p>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</section>

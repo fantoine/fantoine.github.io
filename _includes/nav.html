@@ -1,0 +1,11 @@
+<nav class="navbar navbar-main" role="navigation">
+    {% assign slicedUrl = page.url | slice: 0, 5 %}
+    <h3>{% if slicedUrl == '/blog' %}blog{% else %}{{ page.title | downcase }}{% endif %}</h3>
+    <ul class="nav navbar-nav">
+        <li{% if page.url == '/' %} class="active"{% endif %}><a href="{{ "/" | prepend: site.baseurl }}" title="About">About</a></li>
+        <li{% if slicedUrl == '/resu' %} class="active"{% endif %}><a href="{{ "/resume" | prepend: site.baseurl }}" title="Resume">Resume</a></li>
+        <li{% if slicedUrl == '/proj' %} class="active"{% endif %}><a href="{{ "/projects" | prepend: site.baseurl }}" title="Projects">Projects</a></li>
+        <li{% if slicedUrl == '/blog' %} class="active"{% endif %}><a href="{{ "/blog" | prepend: site.baseurl }}" title="Blog">Blog</a></li>
+        <li{% if slicedUrl == '/cont' %} class="active"{% endif %}><a href="{{ "/contact" | prepend: site.baseurl }}" title="Contact">Contact</a></li>
+    </ul>
+</nav>

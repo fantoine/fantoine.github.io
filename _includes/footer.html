@@ -1,38 +1,38 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+<footer class="footer row clearfix" role="complementary">
+    <div class="footer-widget">
+      <h3>Categories</h3>
+      <label class="screen-reader-text" for="cat">Categories</label>
+      <select name="cat" id="cat" class="form-control">
+        <option value="-1">Select Category</option>
+        <option class="level-0" value="9">Design</option>
+        <option class="level-0" value="10">Dev</option>
+        <option class="level-0" value="1">Information</option>
+      </select>
     </div>
 
-  </div>
+    <div class="footer-widget">
+      <h3>Recent Posts</h3>
+        <ul class="list-unstyled">
+          <li>
+            <a href="http://www.fantoine.com/protects-symfony-routes-against-csrf-attacks/">Protect your routes on Symfony 2 against CSRF attacks</a>
+          </li>
+          <li>
+            <a href="http://www.fantoine.com/its-time-for-a-logo/">It’s time for a logo</a>
+          </li>
+          <li>
+            <a href="http://www.fantoine.com/lets-go-for-a-new-beginning/">Let’s go for a new beginning!</a>
+          </li>
+        </ul>
+    </div>
 
+    <div class="footer-widget">
+      <h3>Recent Projects</h3>
+      <ul class="list-unstyled">
+        <li>
+          <a href="http://www.fantoine.com/project/mytinks/" class="project-permalink">
+            <span>MyTinks</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 </footer>
