@@ -1,0 +1,38 @@
+---
+layout:     default
+title:      Contact
+permalink:  /contact/
+---
+
+<section class="section section-contact">
+    <section class="section section-contact">
+        <div class="row">
+            <div class="col-md-5 col-md-push-7">
+                <div id="contact-map"></div>
+            </div>
+            <div class="col-md-6 col-md-pull-5">
+                <form method="post" action="#" role="form">
+                    <input type="hidden" name="_next" value="{{ site.baseUrl }}/contact" />
+                    <div class="form-group">
+                        <label for="contact-name">Your name</label>
+                        <input type="text" class="form-control" id="contact-name" name="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your email</label>
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <input type="email" class="form-control" id="contact-email" name="_replyto" />
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Your subject</label>
+                        <input type="text" class="form-control" id="contact-subject" name="_subject" />
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Your message</label>
+                        <textarea class="form-control" id="contact-message" rows="5"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-fantoine" value="Send your message" />
+                </form>
+            </div>
+        </div>
+    </section>
+</section>

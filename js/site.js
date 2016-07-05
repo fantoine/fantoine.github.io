@@ -30,7 +30,7 @@ $(function() {
 			position: myPosition,
 			map: map,
 			title: 'I\'m here!',
-			icon: templateUrl + 'img/pin.png',
+			icon: '/img/pin.png',
 		});
 
 		var customMapType = new google.maps.StyledMapType(
@@ -53,5 +53,28 @@ $(function() {
 			{ name: 'Fantoine Style' }
 		);
 		map.mapTypes.set(FANTOINE_TYPE_ID, customMapType);
+
+		// Bind form
+		$contact.find('form').on('submit', function(event) {
+			event.preventDefault();
+
+			// Disable fields
+			var $fields = $(this).find('input[type=email], input[type=text], input[type=hidden], textarea');
+			$fields.attr('disabled', true);
+
+			// Submit form
+			$.ajax({
+			    url: [ 'htt', 'ps://formsp', 'ree.io/fab', 'ien@fantoi', 'ne.fr' ].join(''), 
+			    method: 'POST',
+			    data: { message: "hello!" },
+			    dataType: 'json'
+			}).done(function() {
+				$fields.val('');
+			}).fail(function() {
+				alert('An error occurred while sending your message!');
+			}).always(function() {
+				$fields.removeAttr('disabled');
+			});
+		});
 	}
 });
