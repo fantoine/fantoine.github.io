@@ -1,0 +1,130 @@
+skills:
+    Programming:
+        'Haxe': 100
+        'HTML & CSS': 100
+        'Javascript': 100
+        'PHP': 100
+        'C & C++': 75
+        'Java': 75
+        'Swift': 70
+        'VB.NET & C#.NET': 60
+    Frameworks:
+        'Symfony 2/3 (PHP)': 100
+        'NodeJS (Javascript)': 100
+        'jQuery (Javascript)': 90
+        'Bootstrap (HTML & CSS)': 90
+        'Qt & QML': 80
+    Database:
+        'MySQL': 100
+        'SQLite': 90
+        'ArangoDB': 70
+        'MongoDB': 50
+    Mobile:
+        'iOS': 90
+        'Android': 80
+        'Cordova': 60
+        'Qt Mobile': 50
+    CMS:
+        'Wordpress': 90
+        'Oxid e-Sales': 90
+        'Joomla': 70
+        'Magento': 50
+    Design:
+        'Adobe Photoshop': 90
+        'Adobe Illustrator': 80
+        'Adobe Flash Builder': 70
+    Management:
+        'Modelisation (UML & Merise)': 100
+        'Project planning (Gantt)': 90
+        'Team management': 90
+        'Agile methods': 90
+        'Training': 80
+
+professional:
+    - title: 'CEO'
+      date: '2016 - Current'
+      company: 'MyTinks'
+      url: 'https://www.mytinks.com'
+      tasks:
+        - '**Co-founder**'
+        - '**General Direction**: Company strategy.'
+        - '**Development**: Creation of the first version of the mobile application and backend API.'
+    - title: 'CTO'
+      date: '2015 - Current'
+      company: 'Genedys'
+      url: 'https://www.genedys.com'
+      tasks:
+        - '**Co-founder**'
+        - '**Technical Direction**: Software architecture, Team management.'
+        - '**Development**: Creation of the first version of the platform in Symfony2 and AngularJS.'
+    - title: 'Freelance'
+      date: '2014 - 2015'
+      company: 'fantoine.com'
+      url: 'http://www.fantoine.com'
+      tasks:
+        - '**Indie Game Edition**: Creation of Flash, HTML5 and mobile games.'
+        - '**Software Edition**: Creation of innovative web and mobile software, Involvement in open-source projects.'
+        - '**Consulting**: Project specification, Project management, Code audit.'
+    - title: 'R&D Associate Director'
+      date: '2009 - 2013'
+      company: 'IT Interactive'
+      url: 'http://www.intuitiv.fr'
+      tasks:
+        - '**R&D Center Direction**: Subsidies research, Implementation of ministerial protocols (ACTES), Creation of a new programming language targeting smartphones, Creation of a SAAS platform.'
+        - '**Project Management**: Specifications redaction with clients, Functional and technical analysis, Technical teams management in France and abroad.'
+        - '**Programming**: Creation of a medical backbone analysis software (Flex/AS3), Implementation of bank loans simulators (Haxe/Javascript), Implementation of a Facebook slot machine engine (Haxe/Flash, PHP), CMS modules development (PHP, Oxid, Magento, Joomla),...'
+    - title: 'Co-founder / Project Manager / Developer'
+      date: '2008 - 2011'
+      company: 'EMCII'
+      tasks:
+        - '**Co-founder**: Creation of this company in parallel with my studies.'
+        - '**Project Management**: Specifications redaction with clients, Functional and technical analysis.'
+        - '**Development**: Creation of web sites, web applications and flash applications.'
+
+personal:
+    - title: 'Home Automation System'
+      date: '2016'
+      tasks:
+        - 'Creation of a custom Home Automation System for personal usage, including OpenZWave & EnOcean connectivity.'
+    - title: 'Framework Plumeo'
+      date: '2013'
+      tasks:
+        - 'Creation of an Haxe framework which allows creating MVC application for different kind of target (Web, CLI or UI) all with the same separation of Model-View-Controller. It also provides plenty of services which can be easily integrated in the application lifecycle.'
+    - title: 'QRCode Generator'
+      date: '2011'
+      company: 'QRCode Haxe library'
+      url: 'https://github.com/fantoine/haxe-qrcode'
+      tasks:
+        - 'Study of QRCode specifications and conception of a custom QRCode creation tool.'
+    - title: 'Study of Kinect technology'
+      date: '2010'
+      tasks:
+        - 'Study of Microsoft Kinect communication protocol and its usage in client software.'
+    - title: 'Manda project'
+      date: '2009'
+      tasks:
+        - 'Creation of an UI framework using the open-source Haxe technology. Its goal is to remove constraints while creating web applications and unify client-server interactions.'
+
+formation:
+    - title: 'OXID e-Shop Developer Certification'
+      date: '2012'
+      company: 'OXID eSales'
+      url: 'http://www.oxid-esales.com'
+      tasks:
+        - 'OXID eShop Certified Engineer (EE)'
+    - title: 'Graduate in Computer Engineering'
+      date: '2008 - 2011'
+      company: 'EPSI'
+      url: 'http://www.epsi.fr'
+      tasks:
+        - 'End of study thesis : RD in IT Services : a risky strategic component?'
+    - title: 'Integrated Preparatory Cycle'
+      date: '2006 - 2008'
+      company: 'EPSI'
+      url: 'http://www.epsi.fr'
+      tasks:
+        - 'BTS IT Management (Application Development)'
+    - title: 'Gendarmerie Preparation'
+      date: '2007'
+      tasks:
+        - 'Degree of gendarme assistant'

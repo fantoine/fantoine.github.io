@@ -31,3 +31,11 @@ timezone: "Europe/Paris"
 
 # Permalink
 permalink: /blog/:categories/:slug
+
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - bower.json
+    - package.json
+    - gulpfile.js
+    - README.md

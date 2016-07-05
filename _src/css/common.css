@@ -89,11 +89,20 @@ body {
 	border-radius: 4px;
 
 	/*.progress-bar-variant(@color-blue);*/
+	background-color: var(--color-blue);
 }
 .label-fantoine {
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 
 	/*.label-variant(@color-blue);*/
+	background-color: var(--color-blue);
+
+	&[href] {
+		&:hover,
+		&:focus {
+		  	background-color: color(var(--color-blue) blackness(25%));
+		}
+	}
 }
 
 a {

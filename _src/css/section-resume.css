@@ -1,15 +1,18 @@
+@custom-media --screen-sm (min-width: 768px);
+@custom-media --screen-md (min-width: 992px);
+
 .section-resume {
-	.resume-row {
+	& .resume-row {
 		margin-bottom: 50px;
 
 		&:last-child {
 			margin-bottom: 0;
 		}
 
-		.resume-col-title {
+		& .resume-col-title {
 			padding-bottom: 20px;
 
-			h4 {
+			& h4 {
 				text-align: center;
 				text-transform: uppercase;
 				font-weight: lighter;
@@ -17,31 +20,31 @@
 				font-size: 25px;
 			}
 		}
-		.resume-col-content {
+		& .resume-col-content {
 			padding-top: 20px;
-			border-top: 1px dashed @color-blue;
+			border-top: 1px dashed var(--color-blue);
 		}
 
-		.resume-entries, .resume-skills {
-			h5 {
+		& .resume-entries, & .resume-skills {
+			& h5 {
 				font-size: 20px;
 				margin-top: 0;
 
-				.label {
+				& .label {
 					display: block;
 					margin-top: 10px;
 				}
 			}
-			h6 {
+			& h6 {
 				margin-top: 0;
 				text-transform: uppercase;
 				font-size: 16px;
 				font-weight: lighter;
-				color: @color-blue;
+				color: var(--color-blue);
 
-				a {
+				& a {
 					text-decoration: underline;
-					color: @color-blue;
+					color: var(--color-blue);
 
 					&:hover, &:focus {
 						text-decoration: none;
@@ -49,8 +52,8 @@
 				}
 			}
 		}
-		.resume-entries {
-			.resume-entry {
+		& .resume-entries {
+			& .resume-entry {
 				margin-bottom: 50px;
 
 				&:last-child {
@@ -61,31 +64,29 @@
 					margin: 0 30px;
 					text-align: justify;
 
-					.list-unstyled();
-
-					li {
+					& li {
 						margin-bottom: 10px;
 
 						&:last-child {
 							margin-bottom: 0;
 						}
 					}
-					span {
+					& span {
 						font-weight: bold;
 					}
 				}
 			}
 		}
-		.resume-skills {
+		& .resume-skills {
 			padding: 0 15px; 
 			margin-bottom: 50px;
 
-			.progress-skill {
+			& .progress-skill {
 				height: 30px;
 				margin-bottom: 10px;
-				background-color: @color-grey-light;
+				background-color: var(--color-grey-light);
 
-				.progress-bar {
+				& .progress-bar {
 					line-height: 30px;
 					text-align: left;
 					padding-left: 15px;
@@ -119,40 +120,40 @@
 	}
 }
 
-@media (min-width: @screen-md-min) {
+@media (--screen-md) {
 	.section-resume {
-		.resume-row {
-			.resume-col-title {
+		& .resume-row {
+			& .resume-col-title {
 				padding-right: 30px;
 				padding-bottom: 0;
 
-				h4 {
+				& h4 {
 					text-align: right;
 				}
 			}
-			.resume-col-content {
+			& .resume-col-content {
 				padding-left: 30px;
 				padding-top: 0;
 				border-top: none;
-				border-left: 1px dashed @color-blue;
+				border-left: 1px dashed var(--color-blue);
 			}
 		}
 	}
 }
-@media (min-width: @screen-sm-min) {
-	.section-resume {
-		.resume-row {
-			.resume-entries {
-				h5 {
-					.label {
-						margin-top: 0;
 
-						.pull-right();
+@media (--screen-sm) {
+	.section-resume {
+		& .resume-row {
+			& .resume-entries {
+				& h5 {
+					& .label {
+						margin-top: 0;
+						float: right;
 					}
 				}
 			}
 
-			.resume-skills {
+			& .resume-skills {
 				margin-bottom: 30px;
 			}
 		}

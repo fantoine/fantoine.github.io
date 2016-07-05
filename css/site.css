@@ -105,12 +105,21 @@ body {
 	border-radius: 4px;
 
 	/*.progress-bar-variant(@color-blue);*/
+	background-color: #2B8ABF;
 }
 
 .label-fantoine {
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 
 	/*.label-variant(@color-blue);*/
+	background-color: #2B8ABF
+}
+
+.label-fantoine[href] {}
+
+.label-fantoine[href]:hover,
+		.label-fantoine[href]:focus {
+	background-color: rgb(43, 138, 191);
 }
 
 a {
@@ -731,6 +740,221 @@ padding-top: 0
 .section-projects .project-title h3 span {
     color: #2B8ABF;
     text-transform: none
+}
+.section-resume {
+}
+
+.section-resume .resume-row {
+
+	margin-bottom: 50px
+}
+
+.section-resume .resume-row:last-child {
+
+	margin-bottom: 0
+}
+
+.section-resume .resume-row .resume-col-title {
+
+	padding-bottom: 20px
+}
+
+.section-resume .resume-row .resume-col-title h4 {
+
+	text-align: center;
+
+	text-transform: uppercase;
+
+	font-weight: lighter;
+
+	margin: 0;
+
+	font-size: 25px
+}
+
+.section-resume .resume-row .resume-col-content {
+
+	padding-top: 20px;
+
+	border-top: 1px dashed #2B8ABF
+}
+
+.section-resume .resume-row .resume-entries, .section-resume .resume-row .resume-skills {
+}
+
+.section-resume .resume-row .resume-entries h5, .section-resume .resume-row .resume-skills h5 {
+
+	font-size: 20px;
+
+	margin-top: 0
+}
+
+.section-resume .resume-row .resume-entries h5 .label, .section-resume .resume-row .resume-skills h5 .label {
+
+	display: block;
+
+	margin-top: 10px
+}
+
+.section-resume .resume-row .resume-entries h6, .section-resume .resume-row .resume-skills h6 {
+
+	margin-top: 0;
+
+	text-transform: uppercase;
+
+	font-size: 16px;
+
+	font-weight: lighter;
+
+	color: #2B8ABF
+}
+
+.section-resume .resume-row .resume-entries h6 a, .section-resume .resume-row .resume-skills h6 a {
+
+	text-decoration: underline;
+
+	color: #2B8ABF
+}
+
+.section-resume .resume-row .resume-entries h6 a:hover, .section-resume .resume-row .resume-entries h6 a:focus, .section-resume .resume-row .resume-skills h6 a:hover, .section-resume .resume-row .resume-skills h6 a:focus {
+
+	text-decoration: none
+}
+
+.section-resume .resume-row .resume-entries {
+}
+
+.section-resume .resume-row .resume-entries .resume-entry {
+
+	margin-bottom: 50px
+}
+
+.section-resume .resume-row .resume-entries .resume-entry:last-child {
+
+	margin-bottom: 0
+}
+
+.section-resume .resume-row .resume-entries .resume-entry > ul {
+
+	margin: 0 30px;
+
+	text-align: justify
+}
+
+.section-resume .resume-row .resume-entries .resume-entry > ul li {
+
+	margin-bottom: 10px
+}
+
+.section-resume .resume-row .resume-entries .resume-entry > ul li:last-child {
+
+	margin-bottom: 0
+}
+
+.section-resume .resume-row .resume-entries .resume-entry > ul span {
+
+	font-weight: bold
+}
+
+.section-resume .resume-row .resume-skills {
+
+	padding: 0 15px;
+
+	margin-bottom: 50px
+
+	/*
+			.resume-skill-rule {
+				.list-unstyled();
+				.clearfix();
+
+				li {
+					display: block;
+					float: left;
+					width: 25%;
+					padding: 0;
+					margin: 0;
+					text-indent: 9999em;
+					line-height: 10px;
+					border-left: 1px solid @color-grey;
+
+					&:last-child {
+						border-right: 1px solid @color-grey;
+					}
+				}
+			}
+			*/
+}
+
+.section-resume .resume-row .resume-skills .progress-skill {
+
+	height: 30px;
+
+	margin-bottom: 10px;
+
+	background-color: #DBDBDB
+}
+
+.section-resume .resume-row .resume-skills .progress-skill .progress-bar {
+
+	line-height: 30px;
+
+	text-align: left;
+
+	padding-left: 15px;
+
+	font-size: 16px;
+
+	white-space: nowrap;
+
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5)
+}
+
+@media (min-width: 992px) {
+	.section-resume {
+	}
+	.section-resume .resume-row {
+}
+	.section-resume .resume-row .resume-col-title {
+
+		padding-right: 30px;
+
+		padding-bottom: 0
+	}
+	.section-resume .resume-row .resume-col-title h4 {
+
+		text-align: right
+	}
+	.section-resume .resume-row .resume-col-content {
+
+		padding-left: 30px;
+
+		padding-top: 0;
+
+		border-top: none;
+
+		border-left: 1px dashed #2B8ABF
+	}
+}
+
+@media (min-width: 768px) {
+	.section-resume {
+	}
+	.section-resume .resume-row {
+}
+	.section-resume .resume-row .resume-entries {
+}
+	.section-resume .resume-row .resume-entries h5 {
+}
+	.section-resume .resume-row .resume-entries h5 .label {
+
+		margin-top: 0;
+
+		float: right
+	}
+	.section-resume .resume-row .resume-skills {
+
+		margin-bottom: 30px
+	}
 }
 .section {
 	margin: 0;

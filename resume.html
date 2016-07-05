@@ -4,22 +4,288 @@ title:      Resume
 permalink:  /resume/
 ---
 
-<div class="home">
+<section class="section section-resume">
+    {% if site.data.resume.skills.size > 0 %}
+    <div class="row resume-row">
+        <div class="col-md-3 resume-col resume-col-title">
+          <h4>My skills</h4>
+        </div>
+        <div class="col-md-9 resume-col resume-col-content">
+            <div class="row">
+            {% for skills_data in site.data.resume.skills %}
+                {% assign mod = forloop.index | modulo: 2 %}
 
-  <h1 class="page-heading">Posts</h1>
+                {% assign skill_group = skills_data[0] %}
+                {% assign skill_details = skills_data[1] %}
+                <div class="col-sm-6 resume-skills">
+                    <h5>{{ skill_group }}</h5>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    {% for skill_data in skills_data[1] %}
+                    <div class="progress progress-striped progress-skill">
+                        <div class="progress-bar progress-bar-fantoine" role="progressbar" aria-valuenow="{{ skill_data[1] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ skill_data[1] }}%">
+                            {{ skill_data[0] }}
+                            <span class="sr-only">{{ skill_data[1] }}%</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+                {% if mod == 0 and forloop.index > 0 %}</div><div class="row">{% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    {% if site.data.resume.professional.size > 0 %}
+    <div class="row resume-row">
+        <div class="col-md-3 resume-col resume-col-title">
+            <h4>My professional experience</h4>
+        </div>
+        <div class="col-md-9 resume-col resume-col-content">
+            <div class="resume-entries">
+            {% for entry_data in site.data.resume.professional %}
+                {% assign entry = entry_data %}
 
-</div>
+                <div class="resume-entry">
+                    <h5>
+                        {{ entry.title }}
+                        <span class="label label-fantoine">{{ entry.date }}</span>
+                    </h5>
+                    {% if entry.company %}<h6>
+                        {% if entry.url %}<a href="{{ entry.url }}" target="_blank">{% endif %}
+                        {{ entry.company }}
+                        {% if entry.url %}</a>{% endif %}
+                    </h6>{% endif %}
+                    <ul class="resume-entry-list list-unstyled">
+                    {% for task in entry.tasks %}
+                        <li>{{ task | markdownify }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if site.data.resume.personal.size > 0 %}
+    <div class="row resume-row">
+        <div class="col-md-3 resume-col resume-col-title">
+            <h4>My personal experience</h4>
+        </div>
+        <div class="col-md-9 resume-col resume-col-content">
+            <div class="resume-entries">
+            {% for entry_data in site.data.resume.personal %}
+                {% assign entry = entry_data %}
+
+                <div class="resume-entry">
+                    <h5>
+                        {{ entry.title }}
+                        <span class="label label-fantoine">{{ entry.date }}</span>
+                    </h5>
+                    {% if entry.company %}<h6>
+                        {% if entry.url %}<a href="{{ entry.url }}" target="_blank">{% endif %}
+                        {{ entry.company }}
+                        {% if entry.url %}</a>{% endif %}
+                    </h6>{% endif %}
+                    <ul class="resume-entry-list list-unstyled">
+                    {% for task in entry.tasks %}
+                        <li>{{ task | markdownify }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if site.data.resume.formation.size > 0 %}
+    <div class="row resume-row">
+        <div class="col-md-3 resume-col resume-col-title">
+            <h4>My qualifications / certifications</h4>
+        </div>
+        <div class="col-md-9 resume-col resume-col-content">
+            <div class="resume-entries">
+            {% for entry_data in site.data.resume.formation %}
+                {% assign entry = entry_data %}
+
+                <div class="resume-entry">
+                    <h5>
+                        {{ entry.title }}
+                        <span class="label label-fantoine">{{ entry.date }}</span>
+                    </h5>
+                    {% if entry.company %}<h6>
+                        {% if entry.url %}<a href="{{ entry.url }}" target="_blank">{% endif %}
+                        {{ entry.company }}
+                        {% if entry.url %}</a>{% endif %}
+                    </h6>{% endif %}
+                    <ul class="resume-entry-list list-unstyled">
+                    {% for task in entry.tasks %}
+                        <li>{{ task | markdownify }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% comment %}
+    <div class="row resume-row">
+          <div class="col-md-3 resume-col resume-col-title">
+            <h4>My professionnal experience</h4>
+          </div>
+          <div class="col-md-9 resume-col resume-col-content">
+            <div class="resume-entries">
+              <div class="resume-entry">
+                <h5>
+                  Freestyle Developer
+                  <span class="label label-fantoine">2014 - Current</span>
+                </h5>
+                <h6>Freelance</h6>
+                <ul class="resume-entry-list list-unstyled">
+                  <li>
+                    Enjoying life!!
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-entry">
+                <h5>
+                  R&amp;D Associate Director
+                  <span class="label label-fantoine">2009 - 2013</span>
+                </h5>
+                <h6><a href="http://www.intuitiv.fr">IT Interactive</a></h6>
+                <ul class="resume-entry-list">
+                  <li>
+                    <span>R&D Center Direction</span> : Subsidies research, Implementation of ministerial protocols (ACTES), Creation of a new programming language targeting smartphones, Creation of a SAAS platform.
+                  </li>
+                  <li>
+                    <span>Project Management</span> : Specifications redaction with clients, Functional and technical analysis, Technical teams management in France and abroad.
+                  </li>
+                  <li>
+                    <span>Programming</span> : Creation of a medical backbone analysis software (Flex/AS3), Implementation of bank loans simulators (Haxe/Javascript), Implementation of a Facebook slot machine engine (Haxe/Flash, PHP), CMS modules development (PHP, Oxid, Magento, Joomla),...
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-entry">
+                <h5>
+                  Co-founder / Project Manager / Developer
+                  <span class="label label-fantoine">2008 - 2011</span>
+                </h5>
+                <h6>EMCII</h6>
+                <ul class="resume-entry-list">
+                  <li>
+                    <span>Co-founder</span> : I co-created this company with 2 friends while I was still a student.
+                  </li>
+                  <li>
+                    <span>Project Manager</span> : Specifications redaction with clients, Functional and technical analysis.
+                  </li>
+                  <li>
+                    <span>Developer</span> : Creation of web sites, web applications and flash applications.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="row resume-row">
+          <div class="col-md-3 resume-col resume-col-title">
+            <h4>My personnal experience</h4>
+          </div>
+          <div class="col-md-9 resume-col resume-col-content">
+            <div class="resume-entries">
+              <div class="resume-entry">
+                <h5>
+                  QRCode Generator
+                  <span class="label label-fantoine">2011</span>
+                </h5>
+                <ul class="resume-entry-list">
+                  <li>
+                    Study of QRCode specifications and conception of a custom QRCode creation tool.
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-entry">
+                <h5>
+                  Study of Kinect&#0153; technology
+                  <span class="label label-fantoine">2010</span>
+                </h5>
+                <ul class="resume-entry-list">
+                  <li>
+                    Study of Kinect&#0153; communication protocol and its usage in client software.
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-entry">
+                <h5>
+                  Manda Project
+                  <span class="label label-fantoine">2009</span>
+                </h5>
+                <ul class="resume-entry-list">
+                  <li>
+                    Creation of an UI framework using the open-source Haxe technology. Its goal is to remove constraints while creating web applications and unify client-server interactions.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="row resume-row">
+          <div class="col-md-3 resume-col resume-col-title">
+            <h4>My qualifications / certifications</h4>
+          </div>
+          <div class="col-md-9 resume-col resume-col-content">
+            <div class="resume-entries">
+              <div class="resume-entry">
+                <h5>
+                  OXID e-Shop Developer Certification
+                  <span class="label label-fantoine">2012</span>
+                </h5>
+                <h6><a href="http://www.oxid-esales.com">OXID eSales</a></h6>
+                <ul class="resume-entry-list">
+                  <li>
+                    OXID eShop Certified Engineer (EE)
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-entry">
+                <h5>
+                  Graduate in Computer Engineering
+                  <span class="label label-fantoine">2008 - 2011</span>
+                </h5>
+                <h6><a href="http://www.epsi.fr">EPSI</a></h6>
+                <ul class="resume-entry-list">
+                  <li>
+                    <span>End of study thesis</span> : R&amp;D in IT Services : a risky strategic component?
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-entry">
+                <h5>
+                  Integrated Preparatory Cycle
+                  <span class="label label-fantoine">2006 - 2008</span>
+                </h5>
+                <h6><a href="http://www.epsi.fr">EPSI</a></h6>
+                <ul class="resume-entry-list">
+                  <li>BTS IT Management (Application Development)</li>
+                </ul>
+              </div>
+              <div class="resume-entry">
+                <h5>
+                  Gendarmerie Preparation
+                  <span class="label label-fantoine">2007</span>
+                </h5>
+                <ul class="resume-entry-list">
+                  <li>
+                    Degree of gendarme assistant
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+{% endcomment %}
+</section>
