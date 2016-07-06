@@ -1,4 +1,17 @@
 $(function() {
+    // Category selector
+    var $categories = $('#categories-select');
+    if($categories.length) {
+        $categories.on('change', function() {
+            var value = $(this).val();
+            if (value != '-1') {
+                window.location.href = value;
+            }
+        });
+    }
+});
+
+$(function() {
 	var colors = {
 		blue: '#2B8ABF',
 		grey: '#343434',
@@ -60,7 +73,9 @@ $(function() {
 
 			// Disable fields
 			var $fields = $(this).find('input[type=email], input[type=text], input[type=hidden], textarea');
+			var $submit = $(this).find('submit');
 			$fields.attr('disabled', true);
+			$submit.attr('disabled', true);
 
 			// Submit form
 			$.ajax({
@@ -74,6 +89,7 @@ $(function() {
 				alert('An error occurred while sending your message!');
 			}).always(function() {
 				$fields.removeAttr('disabled');
+				$submit.removeAttr('disabled');
 			});
 		});
 	}

@@ -1,9 +1,9 @@
 ---
-layout: post
-title:  "Let’s go for a new beginning!"
-date:   2013-01-01 12:00:00 +0200
-category: Information
-slug: lets-go-for-a-new-beginning
+layout:     post
+title:      "Let’s go for a new beginning!"
+date:       2013-01-01 12:00:00 +0200
+category:   information
+slug:       lets-go-for-a-new-beginning
 ---
 
 Today is a big day...and maybe **THE** big day! Today, is the first day of 2014 (Happy New year!!) but it especially marks the beginning of my new career as **an independant developer and entrepreneur**! Yep, sir! And with all the adventures and challenges which come in the package, please.

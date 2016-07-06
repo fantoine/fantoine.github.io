@@ -148,27 +148,13 @@ label {
 	}
 }
 .footer {
-	margin-left: 0;
-	margin-right: 0;
+	margin: 0;
 	background-color: #DBDBDB;
 	box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.05)
 }
 
 .footer .footer-widget {
-	position: relative;
-	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
 	padding: 30px 20px 0 20px
-}
-
-@media (min-width: 768px) {
-
-	.footer .footer-widget {
-		float: left;
-		width: 25%
-		/* (3 col / 12 total) */
-	}
 }
 
 .footer .footer-widget:last-child {

@@ -60,7 +60,9 @@ $(function() {
 
 			// Disable fields
 			var $fields = $(this).find('input[type=email], input[type=text], input[type=hidden], textarea');
+			var $submit = $(this).find('submit');
 			$fields.attr('disabled', true);
+			$submit.attr('disabled', true);
 
 			// Submit form
 			$.ajax({
@@ -74,6 +76,7 @@ $(function() {
 				alert('An error occurred while sending your message!');
 			}).always(function() {
 				$fields.removeAttr('disabled');
+				$submit.removeAttr('disabled');
 			});
 		});
 	}

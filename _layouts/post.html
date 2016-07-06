@@ -12,11 +12,7 @@ layout: default
         <div class="blog-row row">
             <div class="blog-col blog-col-details col-md-2">
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-fw fa-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time></li>
-                    <li><i class="fa fa-fw fa-user"></i> Fabien Antoine</li>
-                    <li><i class="fa fa-fw fa-folder-open"></i> {{ page.category }}</li>
-                    {% if post.tags != nil and post.tags.length > 0 %}<li><i class="fa fa-fw fa-tags"></i> {{ post.tags | join: ', ' }}</li>{% endif %}
-                    {% comment %}<li><i class="fa fa-fw fa-comments"></i> <a href="#">0 comment</a></li>{% endcomment %}
+                    {% include posts_meta.html post=page %}
                 </ul>
             </div>
             <div class="blog-col blog-col-content col-md-10" itemprop="articleBody">

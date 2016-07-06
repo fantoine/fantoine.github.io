@@ -1,0 +1,22 @@
+{% if include.posts.size > 0 %}
+    {% for post in include.posts %}
+        <article class="blog-article">
+            <header class="row">
+                <div class="col-md-10 col-md-offset-2">
+                    <h4><a href="{{ post.url | prepend: site.baseUrl }}">{{ post.title }}</a></h4>
+                </div>
+            </header>
+            <div class="blog-row row">
+                <div class="blog-col blog-col-details col-md-2">
+                    {% include posts_meta.html post=post %}
+                </div>
+                <div class="blog-col blog-col-content col-md-10">
+                    <img src="{{ site.baseUrl }}/img/posts/{{ post.slug }}/thumbnail.png" class="blog-image img-responsive img-thumbnail" alt="{{ post.title }}" />
+                    {{ post.excerpt }}
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+{% else %}
+    <p>No post found.</p>
+{% endif %}

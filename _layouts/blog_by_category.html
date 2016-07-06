@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<section class="section section-blog">
+    <header class="blog-title">
+        <h3>Category Archives: <span>{{ site.data.categories[page.category] }}</span></h3>
+    </header>
+
+    {% assign list = site.posts | where:"category", page.category %}
+    {% include posts.html posts=list %}
+</section>

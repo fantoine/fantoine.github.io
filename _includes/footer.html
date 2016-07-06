@@ -1,39 +1,31 @@
 <footer class="footer row clearfix" role="complementary">
-    <div class="footer-widget">
-      <h3>Categories</h3>
-      <label class="screen-reader-text" for="cat">Categories</label>
-      <select name="cat" id="cat" class="form-control">
-        <option value="-1">Select Category</option>
-        <option class="level-0" value="9">Design</option>
-        <option class="level-0" value="10">Dev</option>
-        <option class="level-0" value="1">Information</option>
-      </select>
+    <div class="footer-widget col-sm-4">
+        <h3>Categories</h3>
+        <select name="cat" id="categories-select" class="form-control">
+            <option value="-1">Select Category</option>
+            {% for category in site.data.categories | sort %}
+            <option value="{{ site.baseUrl }}/blog/{{ category[0] }}">{{ category[1] }}</option>
+            {% endfor %}
+        </select>
     </div>
 
-    <div class="footer-widget">
-      <h3>Recent Posts</h3>
+    <div class="footer-widget col-sm-4">
+        <h3>Recent Posts</h3>
         <ul class="list-unstyled">
-          <li>
-            <a href="http://www.fantoine.com/protects-symfony-routes-against-csrf-attacks/">Protect your routes on Symfony 2 against CSRF attacks</a>
-          </li>
-          <li>
-            <a href="http://www.fantoine.com/its-time-for-a-logo/">It’s time for a logo</a>
-          </li>
-          <li>
-            <a href="http://www.fantoine.com/lets-go-for-a-new-beginning/">Let’s go for a new beginning!</a>
-          </li>
+        {% for post in site.posts limit: 3 %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
         </ul>
     </div>
 
-    <div class="footer-widget">
-      <h3>Recent Projects</h3>
-      <ul class="list-unstyled">
-        <li>
-          <a href="http://www.fantoine.com/project/mytinks/" class="project-permalink">
-            <span>MyTinks</span>
-          </a>
-        </li>
-      </ul>
+    <div class="footer-widget col-sm-4">
+        <h3>Recent Projects</h3>
+        <ul class="list-unstyled">
+            {% for project_data in site.data.projects limit: 3 reversed %}
+            {% assign project = project_data[1] %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
 </footer>
 

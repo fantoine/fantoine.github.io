@@ -1,0 +1,12 @@
+{% for data_category in site.data.categories %}
+    {% if data_category[0] == include.post.category %}
+        {% assign category = data_category %}
+    {% endif %}
+{% endfor %}
+<ul class="list-unstyled">
+    <li><i class="fa fa-fw fa-calendar"></i> <time datetime="{{ include.post.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.post.date | date: "%B %-d, %Y" }}</time></li>
+    <li><i class="fa fa-fw fa-user"></i> <a href="#">Fabien Antoine</a></li>
+    {% if category %}<li><i class="fa fa-fw fa-folder-open"></i> <a href="{{ site.baseUrl }}/blog/{{ category[0] }}">{{ category[1] }}</a></li>{% endif %}
+    {% if include.post.tags != nil and include.post.tags.length > 0 %}<li><i class="fa fa-fw fa-tags"></i> {{ include.post.tags | join: ', ' }}</li>{% endif %}
+    {% comment %}<li><i class="fa fa-fw fa-comments"></i> <a href="#">0 comment</a></li>{% endcomment %}
+</ul>
