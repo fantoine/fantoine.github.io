@@ -542,8 +542,22 @@ margin-bottom: 15px
 text-indent: 2em
 }
 
-.section-blog .blog-article .blog-row-no-details .blog-col-content {
-/* .make-md-column(12); */
+.section-blog .blog-article .blog-col-content .article-image {
+
+display: block;
+
+max-width: 100%;
+
+height: auto
+}
+
+.section-blog .blog-article .blog-col-content .article-image.center-image {
+
+display: block;
+
+margin-left: auto;
+
+margin-right: auto
 }
 
 .section-blog .blog-pagination {

@@ -3,6 +3,7 @@ layout:     post
 title:      "Let’s go for a new beginning!"
 date:       2013-01-01 12:00:00 +0200
 category:   information
+tags:       []
 slug:       lets-go-for-a-new-beginning
 ---
 

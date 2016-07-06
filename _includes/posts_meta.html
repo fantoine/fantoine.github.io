@@ -7,6 +7,8 @@
     <li><i class="fa fa-fw fa-calendar"></i> <time datetime="{{ include.post.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.post.date | date: "%B %-d, %Y" }}</time></li>
     <li><i class="fa fa-fw fa-user"></i> <a href="#">Fabien Antoine</a></li>
     {% if category %}<li><i class="fa fa-fw fa-folder-open"></i> <a href="{{ site.baseUrl }}/blog/{{ category[0] }}">{{ category[1] }}</a></li>{% endif %}
-    {% if include.post.tags != nil and include.post.tags.length > 0 %}<li><i class="fa fa-fw fa-tags"></i> {{ include.post.tags | join: ', ' }}</li>{% endif %}
+    {% if include.post.tags and include.post.tags.size > 0 %}<li><i class="fa fa-fw fa-tags"></i>
+        {% assign first = true %}
+        {% for tag in include.post.tags | sort %}{% for data_tag in site.data.tags %}{% if data_tag == tag %}{% if false == first %}, {% endif %}<a href="{{ site.baseUrl }}/blog/tag/{{ tag }}">{{ tag }}</a>{% endif %}{% endfor %}{% assign first = false %}{% endfor %}</li>{% endif %}
     {% comment %}<li><i class="fa fa-fw fa-comments"></i> <a href="#">0 comment</a></li>{% endcomment %}
 </ul>

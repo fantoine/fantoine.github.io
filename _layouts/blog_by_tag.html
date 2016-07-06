@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<section class="section section-blog">
+    <header class="blog-title">
+        <h3>Tag Archives: <span>{{ page.tag }}</span></h3>
+    </header>
+
+    {% assign list = '' | split: '' %}
+    {% for item in site.posts %}{% if item.tags and item.tags.size > 0 and item.tags contains page.tag %}{% assign list = list | push: item %}{% endif %}{% endfor %}
+    {% include posts.html posts=list %}
+</section>

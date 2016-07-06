@@ -41,20 +41,18 @@ skills:
         'Training': 80
 
 professional:
-    - title: 'CEO'
+    - title: 'Co-Founder / CEO'
       date: '2016 - Current'
       company: 'MyTinks'
       url: 'https://www.mytinks.com'
       tasks:
-        - '**Co-founder**'
         - '**General Direction**: Company strategy.'
         - '**Development**: Creation of the first version of the mobile application and backend API.'
-    - title: 'CTO'
+    - title: 'Co-Founder / CTO'
       date: '2015 - Current'
       company: 'Genedys'
       url: 'https://www.genedys.com'
       tasks:
-        - '**Co-founder**'
         - '**Technical Direction**: Software architecture, Team management.'
         - '**Development**: Creation of the first version of the platform in Symfony2 and AngularJS.'
     - title: 'Freelance'
