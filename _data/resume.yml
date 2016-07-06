@@ -7,13 +7,15 @@ skills:
         'C & C++': 75
         'Java': 75
         'Swift': 70
-        'VB.NET & C#.NET': 60
+        'C#': 60
     Frameworks:
         'Symfony 2/3 (PHP)': 100
         'NodeJS (Javascript)': 100
         'jQuery (Javascript)': 90
         'Bootstrap (HTML & CSS)': 90
-        'Qt & QML': 80
+        'Qt': 80
+        'OpenFl': 60
+        '.NET': 50
     Database:
         'MySQL': 100
         'SQLite': 90
@@ -42,19 +44,19 @@ skills:
 
 professional:
     - title: 'Co-Founder / CEO'
-      date: '2016 - Current'
+      date: '2015 - Current'
       company: 'MyTinks'
       url: 'https://www.mytinks.com'
       tasks:
         - '**General Direction**: Company strategy.'
-        - '**Development**: Creation of the first version of the mobile application and backend API.'
+        - '**Development**: Creation of the first version of the mobile application and API backend.'
     - title: 'Co-Founder / CTO'
       date: '2015 - Current'
       company: 'Genedys'
       url: 'https://www.genedys.com'
       tasks:
         - '**Technical Direction**: Software architecture, Team management.'
-        - '**Development**: Creation of the first version of the platform in Symfony2 and AngularJS.'
+        - '**Development**: Creation of the initial version of the platform.'
     - title: 'Freelance'
       date: '2014 - 2015'
       company: 'fantoine.com'
