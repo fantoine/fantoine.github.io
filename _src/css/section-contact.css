@@ -9,30 +9,14 @@
 
 		box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 	}
-/*
-	.wpcf7-response-output {
-		margin: 0;
-		.alert();
-	}
-	.wpcf7-mail-sent-ok {
-		.alert-success();
-	}
-	.wpcf7-spam-blocked,
-	.wpcf7-validation-errors {
-		.alert-danger();
-	}
-	.wpcf7-not-valid {
-		border-color: #b94a48;
-	}
-	.wpcf7-not-valid-tip {
-		.label();
-		.label-danger();
 
-		font-weight: normal;
-		font-size: 13px;
-		border: none;
+	& .alert-sent-message {
+		display: none;
+
+		&.alert-sent {
+			display: block;
+		}
 	}
-*/
 }
 
 @media (--screen-md) {

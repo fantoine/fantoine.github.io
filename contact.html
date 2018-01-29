@@ -11,8 +11,11 @@ permalink:  /contact/
                 <div id="contact-map"></div>
             </div>
             <div class="col-md-6 col-md-pull-5">
-                <form method="post" action="https://formspree.io/fabien@fantoine.fr" role="form">
-                    <input type="hidden" name="_next" value="{{ site.baseUrl }}/contact" />
+                <div class="alert alert-success alert-sent-message">
+                    Your message have been sent successfully !<br />
+                    I will answer you as soon as possible.
+                </div>
+                <form method="post" action="#" role="form">
                     <div class="form-group">
                         <label for="contact-name">Your name</label>
                         <input type="text" class="form-control" id="contact-name" name="name" />
@@ -20,7 +23,7 @@ permalink:  /contact/
                     <div class="form-group">
                         <label for="contact-email">Your email</label>
                         <input type="text" name="_gotcha" style="display:none" />
-                        <input type="email" class="form-control" id="contact-email" name="email" />
+                        <input type="email" class="form-control" id="contact-email" name="_replyto" />
                     </div>
                     <div class="form-group">
                         <label for="contact-subject">Your subject</label>

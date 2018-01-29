@@ -77,13 +77,21 @@ $(function() {
 			$fields.attr('disabled', true);
 			$submit.attr('disabled', true);
 
+			// Extract fields
+			var data = {};
+			$.each($fields, function(_, elt) {
+				var $elt = $(elt);
+				data[$elt.attr('name')] = $elt.val();
+			});
+
 			// Submit form
 			$.ajax({
 			    url: [ 'htt', 'ps://formsp', 'ree.io/fab', 'ien@fantoi', 'ne.fr' ].join(''), 
 			    method: 'POST',
-			    data: { message: "hello!" },
+			    data: data,
 			    dataType: 'json'
 			}).done(function() {
+				$contact.find('.alert-sent-message').addClass('alert-sent');
 				$fields.val('');
 			}).fail(function() {
 				alert('An error occurred while sending your message!');

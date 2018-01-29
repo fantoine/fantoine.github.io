@@ -33,3 +33,4 @@ exclude:
     - package.json
     - gulpfile.js
     - README.md
+    - node_modules
