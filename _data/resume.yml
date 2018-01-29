@@ -72,14 +72,14 @@ professional:
       company: 'Genedys'
       url: 'https://www.genedys.com'
       tasks:
-        #- '**Technical Direction**: Software architecture, Team management.'
-        - '**Development**: Creation of the initial version of the platform.'
+        - '**Technical Direction**: Software architecture, Team management.'
+        - '**Development**: Creation of the initial version of the platform, Creation of a solution for microservices system development.'
     - title: 'Co-Founder / CEO'
       date: '2015 - 2017'
       company: 'MyTinks'
       url: 'https://www.mytinks.com'
       tasks:
-        - '**General Direction**: Company strategy.'
+        #- '**General Direction**: Company strategy.'
         - '**Development**: Creation of the first version of the mobile application and API backend.'
     - title: 'Freelance'
       date: '2014 - 2015'
