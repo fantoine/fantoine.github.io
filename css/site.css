@@ -329,7 +329,7 @@ label {
 .section-about .about-image {
 		float: left;
 		margin: 0 20px 20px 0;
-        max-width: 200px;
+        max-width: 150px;
 	}
 	.section-about .about-content p {
 		text-indent: 2em;
