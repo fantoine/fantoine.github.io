@@ -81,7 +81,10 @@ $(function() {
 			var data = {};
 			$.each($fields, function(_, elt) {
 				var $elt = $(elt);
-				data[$elt.attr('name')] = $elt.val();
+				var value = $elt.val();
+				if (value) {
+					data[$elt.attr('name')] = value;
+				}
 			});
 
 			// Submit form
