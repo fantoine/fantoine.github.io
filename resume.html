@@ -19,15 +19,11 @@ permalink:  /resume/
                 {% assign skill_details = skills_data[1] %}
                 <div class="col-sm-6 resume-skills">
                     <h5>{{ skill_group }}</h5>
-
+                    <ul class="list-skills">
                     {% for skill_data in skills_data[1] %}
-                    <div class="progress progress-striped progress-skill">
-                        <div class="progress-bar progress-bar-fantoine" role="progressbar" aria-valuenow="{{ skill_data[1] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ skill_data[1] }}%">
-                            {{ skill_data[0] }}
-                            <span class="sr-only">{{ skill_data[1] }}%</span>
-                        </div>
-                    </div>
+                      <li>{{ skill_data[0] }}</li>
                     {% endfor %}
+                    </ul>
                 </div>
 
                 {% if mod == 0 and forloop.index > 0 %}</div><div class="row">{% endif %}

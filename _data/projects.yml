@@ -1,12 +1,12 @@
 genedys:
     title: Genedys
-    excerpt: MyTinks is the first bulk fuel marketplace which provides everything to manage purchasing and sales process.
+    excerpt: Genedys is the first bulk fuel marketplace which provides everything to manage purchasing and sales process.
     url: https://www.genedys.com
     targets:
         - Businesses
     technologies:
         - PHP/Symfony
-        - Javascript/AngularJS
+        - Javascript/TypeScript/Angular
     category: Web
 
 mytinks:
@@ -17,6 +17,8 @@ mytinks:
         - General public
         - Businesses
     technologies:
-        - Javascript/NodeJS
+        - Javascript/Haxe/NodeJS
         - Swift/iOS
+        - Java/Android
     category: Mobile
+    

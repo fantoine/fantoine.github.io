@@ -95,6 +95,22 @@
 					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 				}
 			}
+
+
+			& .list-skills {
+			    list-style: none;
+			    padding: 0;
+			    margin: 0;
+
+				& li {
+					padding-left: 1em; 
+					text-indent: -.7em;
+				}
+				& li::before {
+					content: "• ";
+					color: var(--color-blue);
+				}
+			}
 			/*
 			.resume-skill-rule {
 				.list-unstyled();

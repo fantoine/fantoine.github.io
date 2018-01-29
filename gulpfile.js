@@ -6,6 +6,7 @@ var gulp = require("gulp"),
     customMedia = require('postcss-custom-media'),
     atImport = require('postcss-import'),
     easings = require('postcss-easings'),
+    nested = require('postcss-nested'),
     colorFunction = require('postcss-color-function'),
     merge = require('merge-stream');
 ;
@@ -56,6 +57,7 @@ gulp.task('css', function() {
             }),
             customMedia,
             atImport(),
+            nested(),
             cssnext,
             colorFunction,
         ]))

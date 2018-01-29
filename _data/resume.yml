@@ -1,31 +1,57 @@
 skills:
+    'Project Direction':
+        'Technical & functional specification': 100
+        'Modeling (BPMN, MLD, UML, ...)': 100
+        'Project Management (Agile Methods)': 100
+        'Quality process': 100
+        'Risk management': 100
+        'Budgeting and cost management': 100
+    Management:
+        'Collaborative management': 100
+        'Training & Coaching': 100
+        'Recruitment': 100
+        'Team management': 100
+        'Meetings animation': 100
+        'Ability to listen': 100
     Programming:
-        'Haxe': 100
-        'HTML & CSS': 100
-        'Javascript': 100
         'PHP': 100
-        'C & C++': 75
+        'Python': 50
+        'HTML & CSS': 100
+        'JavaScript': 100
+        'TypeScript': 100
+        'Haxe': 100
+        'Rust': 80
+        'C & C++': 70
         'Java': 75
         'Swift': 70
         'C#': 60
-    Frameworks:
-        'Symfony 2/3 (PHP)': 100
-        'NodeJS (Javascript)': 100
-        'jQuery (Javascript)': 90
-        'Bootstrap (HTML & CSS)': 90
+    Framework:
+        'Symfony': 100
+        'Zend': 60
+        'NodeJS': 100
+        'Angular': 90
+        'Ionic': 80
+        'jQuery': 90
+        '.NET': 50
         'Qt': 80
         'OpenFl': 60
-        '.NET': 50
     Database:
-        'MySQL': 100
+        'MySQL/MariaDB': 100
+        'PostgreSQL': 90
         'SQLite': 90
-        'ArangoDB': 70
+        'ArangoDB': 80
         'MongoDB': 50
+        'Redis': 80
+        'ElasticSearch': 40
     Mobile:
         'iOS': 90
         'Android': 80
         'Cordova': 60
         'Qt Mobile': 50
+    Infrastructure:
+        '<span>OS</span>: MacOS, CentOS, Debian, Windows': 90
+        'Virtualization: Docker, Vagrant, VirtualBox': 80
+        'Cloud: Amazon Web Services, ScaleWay': 70
     CMS:
         'Wordpress': 90
         'Oxid e-Sales': 90
@@ -35,45 +61,42 @@ skills:
         'Adobe Photoshop': 90
         'Adobe Illustrator': 80
         'Adobe Flash Builder': 70
-    Management:
-        'Modelisation (UML & Merise)': 100
-        'Project planning (Gantt)': 90
-        'Team management': 90
-        'Agile methods': 90
-        'Training': 80
+    Tools:
+        'Management: Jira, Trac': 80
+        'Development: Jetbrains IDEs, Jenkins': 80
+        'Versioning: Git, SVN': 90
 
 professional:
-    - title: 'Co-Founder / CEO'
+    - title: 'CTO'
       date: '2015 - Current'
+      company: 'Genedys'
+      url: 'https://www.genedys.com'
+      tasks:
+        #- '**Technical Direction**: Software architecture, Team management.'
+        - '**Development**: Creation of the initial version of the platform.'
+    - title: 'Co-Founder / CEO'
+      date: '2015 - 2017'
       company: 'MyTinks'
       url: 'https://www.mytinks.com'
       tasks:
         - '**General Direction**: Company strategy.'
         - '**Development**: Creation of the first version of the mobile application and API backend.'
-    - title: 'Co-Founder / CTO'
-      date: '2015 - Current'
-      company: 'Genedys'
-      url: 'https://www.genedys.com'
-      tasks:
-        - '**Technical Direction**: Software architecture, Team management.'
-        - '**Development**: Creation of the initial version of the platform.'
     - title: 'Freelance'
       date: '2014 - 2015'
       company: 'fantoine.com'
       url: 'http://www.fantoine.com'
       tasks:
-        - '**Indie Game Edition**: Creation of Flash, HTML5 and mobile games.'
         - '**Software Edition**: Creation of innovative web and mobile software, Involvement in open-source projects.'
         - '**Consulting**: Project specification, Project management, Code audit.'
-    - title: 'R&D Associate Director'
+    - title: 'R&D Director'
       date: '2009 - 2013'
       company: 'IT Interactive'
       url: 'http://www.intuitiv.fr'
       tasks:
-        - '**R&D Center Direction**: Subsidies research, Implementation of ministerial protocols (ACTES), Creation of a new programming language targeting smartphones, Creation of a SAAS platform.'
+        - '**R&D Center Direction**: Subsidies research, Creation of a new programming language targeting smartphones, Implementation of ministerial protocols (ACTES), Creation of a SAAS platform.'
         - '**Project Management**: Specifications redaction with clients, Functional and technical analysis, Technical teams management in France and abroad.'
         - '**Programming**: Creation of a medical backbone analysis software (Flex/AS3), Implementation of bank loans simulators (Haxe/Javascript), Implementation of a Facebook slot machine engine (Haxe/Flash, PHP), CMS modules development (PHP, Oxid, Magento, Joomla),...'
-    - title: 'Co-founder / Project Manager / Developer'
+    - title: 'Co-founder / Project Manager'
       date: '2008 - 2011'
       company: 'EMCII'
       tasks:
@@ -82,28 +105,24 @@ professional:
         - '**Development**: Creation of web sites, web applications and flash applications.'
 
 personal:
-    - title: 'Home Automation System'
-      date: '2016'
-      tasks:
-        - 'Creation of a custom Home Automation System for personal usage, including OpenZWave & EnOcean connectivity.'
-    - title: 'Framework Plumeo'
-      date: '2013'
-      tasks:
-        - 'Creation of an Haxe framework which allows creating MVC application for different kind of target (Web, CLI or UI) all with the same separation of Model-View-Controller. It also provides plenty of services which can be easily integrated in the application lifecycle.'
-    - title: 'QRCode Generator'
-      date: '2011'
-      company: 'QRCode Haxe library'
-      url: 'https://github.com/fantoine/haxe-qrcode'
-      tasks:
-        - 'Study of QRCode specifications and conception of a custom QRCode creation tool.'
-    - title: 'Study of Kinect technology'
-      date: '2010'
-      tasks:
-        - 'Study of Microsoft Kinect communication protocol and its usage in client software.'
-    - title: 'Manda project'
-      date: '2009'
-      tasks:
-        - 'Creation of an UI framework using the open-source Haxe technology. Its goal is to remove constraints while creating web applications and unify client-server interactions.'
+#    - title: 'Framework Plumeo'
+#      date: '2013'
+#      tasks:
+#        - 'Creation of an Haxe framework which allows creating MVC application for different kind of target (Web, CLI or UI) all with the same separation of Model-View-Controller. It also provides plenty of services which can be easily integrated in the application lifecycle.'
+#    - title: 'QRCode Generator'
+#      date: '2011'
+#      company: 'QRCode Haxe library'
+#      url: 'https://github.com/fantoine/haxe-qrcode'
+#      tasks:
+#        - 'Study of QRCode specifications and conception of a custom QRCode creation tool.'
+#    - title: 'Study of Kinect technology'
+#      date: '2010'
+#      tasks:
+#        - 'Study of Microsoft Kinect communication protocol and its usage in client software.'
+#    - title: 'Manda project'
+#      date: '2009'
+#      tasks:
+#        - 'Creation of an UI framework using the open-source Haxe technology. Its goal is to remove constraints while creating web applications and unify client-server interactions.'
 
 formation:
     - title: 'OXID e-Shop Developer Certification'

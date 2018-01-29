@@ -1,6 +1,6 @@
 /*!
- * modernizr v3.3.1
- * Build http://modernizr.com/download?-printshiv-setclasses-dontmin
+ * modernizr v3.5.0
+ * Build https://modernizr.com/download?-printshiv-setclasses-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -36,7 +36,7 @@
 
   var ModernizrProto = {
     // The current version, dummy
-    _version: '3.3.1',
+    _version: '3.5.0',
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
@@ -159,7 +159,6 @@
             Modernizr[featureNameSplit[0]] = result;
           } else {
             // cast to a Boolean, if not one already
-            /* jshint -W053 */
             if (Modernizr[featureNameSplit[0]] && !(Modernizr[featureNameSplit[0]] instanceof Boolean)) {
               Modernizr[featureNameSplit[0]] = new Boolean(Modernizr[featureNameSplit[0]]);
             }
@@ -222,7 +221,11 @@
     if (Modernizr._config.enableClasses) {
       // Add the new classes
       className += ' ' + classPrefix + classes.join(' ' + classPrefix);
-      isSVG ? docElement.className.baseVal = className : docElement.className = className;
+      if (isSVG) {
+        docElement.className.baseVal = className;
+      } else {
+        docElement.className = className;
+      }
     }
 
   }
@@ -242,7 +245,6 @@
      * @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
      */
     ;(function(window, document) {
-      /*jshint evil:true */
       /** version */
       var version = '3.7.3';
 
@@ -446,10 +448,10 @@
                                                         'h.shivMethods&&(' +
                                                         // unroll the `createElement` calls
                                                         getElements().join().replace(/[\w\-:]+/g, function(nodeName) {
-          data.createElem(nodeName);
-          data.frag.createElement(nodeName);
-          return 'c("' + nodeName + '")';
-        }) +
+                                                          data.createElem(nodeName);
+                                                          data.frag.createElement(nodeName);
+                                                          return 'c("' + nodeName + '")';
+                                                        }) +
           ');return n}'
                                                        )(html5, data.frag);
       }
@@ -591,7 +593,7 @@
        */
       function addWrappers(ownerDocument) {
         var node,
-        nodes = ownerDocument.getElementsByTagName('*'),
+          nodes = ownerDocument.getElementsByTagName('*'),
           index = nodes.length,
           reElements = RegExp('^(?:' + getElements().join('|') + ')$', 'i'),
           result = [];
@@ -613,7 +615,7 @@
        */
       function createWrapper(element) {
         var node,
-        nodes = element.attributes,
+          nodes = element.attributes,
           index = nodes.length,
           wrapper = element.ownerDocument.createElement(shivNamespace + ':' + element.nodeName);
 
@@ -636,7 +638,7 @@
        */
       function shivCssText(cssText) {
         var pair,
-        parts = cssText.split('{'),
+          parts = cssText.split('{'),
           index = parts.length,
           reElements = RegExp('(^|[\\s,>+~])(' + getElements().join('|') + ')(?=[[\\s,>+~#.:]|$)', 'gi'),
           replacement = '$1' + shivNamespace + '\\:$2';
@@ -671,8 +673,8 @@
        */
       function shivPrint(ownerDocument) {
         var shivedSheet,
-        wrappers,
-        data = getExpandoData(ownerDocument),
+          wrappers,
+          data = getExpandoData(ownerDocument),
           namespaces = ownerDocument.namespaces,
           ownerWindow = ownerDocument.parentWindow;
 
@@ -696,9 +698,9 @@
           removeSheet();
 
           var imports,
-          length,
-          sheet,
-          collection = ownerDocument.styleSheets,
+            length,
+            sheet,
+            collection = ownerDocument.styleSheets,
             cssText = [],
             index = collection.length,
             sheets = Array(index);
@@ -761,7 +763,7 @@
         module.exports = html5;
       }
 
-    }(typeof window !== "undefined" ? window : this, document));
+    }(typeof window !== 'undefined' ? window : this, document));
   }
 
   ;
