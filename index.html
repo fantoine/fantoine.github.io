@@ -1,18 +1,328 @@
----
-layout: default
-title:  About
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabien Antoine — Founding Engineer, CTO & Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="FabienAntoine" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
 
-<section class="section section-about clearfix" role="main">
-    <img src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAdQAAAAJDdlYTEwYTEzLTA4ZTUtNDgxZi1hMDRlLWQ4NmIwYjA5MzMyNQ.jpg" class="img-thumbnail about-part about-image" alt="About" />
-    <div class="about-part about-content">
-        <p>I am <em>Fabien Antoine</em>, a creation and digital transformation enthusiast, located near Valence, France.</p>
-        <p>
-            In past years, I had the opportunity to work on different projects, mainly web or mobile-oriented, but affecting many and varied fields of activities.
-            I particularly enjoy working on complex but creative projects, while using innovative technologies and being able to use my creativity, my quality culture and my technical and project management skills to bring projects of all kinds successful.
-        </p>
-        <p>
-            If you feel we could work together, feel free to contact me.
-        </p>
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a class="nav-logo" data-nav="home">fabien<em>antoine</em></a>
+    <button class="hamburger" id="burger"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a data-nav="home">Home</a></li>
+      <li><a data-nav="about">About</a></li>
+      <li><a data-nav="projects">Projects</a></li>
+      <li><a data-nav="background">Background</a></li>
+      <li><a data-nav="contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════ HOME ═══════ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge fade-in"><span class="dot"></span>building things that matter</div>
+        <h1 class="fade-in">Founding Engineer,<br><span class="grad">CTO & Builder.</span></h1>
+        <p class="fade-in">I'm Fabien Antoine — I build products from zero to production and scale the teams behind them. First engineer in, last to leave the codebase. Currently CTPO at <a href="https://www.meltingspot.io/" target="_blank">MeltingSpot</a>, based in France.</p>
+        <div class="hero-cta fade-in">
+          <a class="btn btn-primary" data-nav="projects">View projects <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 16 16"><path d="M4 8h8m-4-4 4 4-4 4"/></svg></a>
+          <a class="btn btn-secondary" data-nav="contact">Get in touch</a>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+</div>
+
+<!-- ═══════ ABOUT ═══════ -->
+<div class="page" id="page-about">
+  <div class="container">
+    <div class="page-header">
+      <div class="section-label fade-in"># about</div>
+      <h1 class="page-title fade-in">Hands-on leader,<br>always building.</h1>
+    </div>
+    <div class="about-intro">
+      <div class="about-text fade-in">
+        <p>I'm the person you bring in <strong>when there's no codebase yet</strong> — and you need one that will still make sense two years from now.</p>
+        <p>Over 17 years, I've done it <strong>four times</strong> as <strong>co-founder and first engineer</strong>: picked the stack, shipped the first lines, hired the first engineers, and built the processes that let teams scale without burning out.</p>
+        <p>I combine strong technical ownership with product instinct — <strong>I care about architecture because I care about shipping</strong>. I work <strong>AI-native</strong>: I don't just build AI features, I use AI at every layer of how I work.</p>
+        <p>I've taken products from <strong>zero to production</strong>, navigated a successful <strong>acquisition by TotalEnergies</strong>, and shipped products used across Europe, Africa, and the Americas — touching Energy, HealthTech, Digital Adoption, and more.</p>
+        <p>When I'm not doing that, I'm tinkering — side projects, open source, or just building things that scratch my own itch. It's how I <strong>stay sharp</strong> and <strong>ahead of the curve</strong>.</p>
+      </div>
+      <div class="about-highlights fade-in">
+        <div class="highlight-card"><div class="num">17+</div><div class="label">years in tech</div></div>
+        <div class="highlight-card"><div class="num">4</div><div class="label">companies co-founded</div></div>
+        <div class="highlight-card"><div class="num">1</div><div class="label">successful exit</div></div>
+        <div class="highlight-card"><div class="num">∞</div><div class="label">ideas yet to build</div></div>
+      </div>
+    </div>
+    <div class="stack-block fade-in">
+      <div class="section-label"># stack</div>
+      <h2 class="page-title" style="font-size:1.5rem;margin-bottom:2rem">What I work with.</h2>
+      <div class="stack-category"><h3>Leadership & Management</h3><div class="stack-row"><span class="pill accent">Engineering Management</span><span class="pill accent">Product Strategy</span><span class="pill">Agile / Scrum</span><span class="pill">Team Coaching & Scaling</span><span class="pill">Hiring & Onboarding</span></div></div>
+      <div class="stack-category"><h3>Backend Development</h3><div class="stack-row"><span class="pill accent">TypeScript</span><span class="pill accent">NodeJS</span><span class="pill accent">NestJS</span><span class="pill">Rust</span><span class="pill">PHP</span><span class="pill">Python</span></div></div>
+      <div class="stack-category"><h3>Frontend Development</h3><div class="stack-row"><span class="pill accent">React</span><span class="pill accent">NextJS</span><span class="pill">Angular</span><span class="pill">Web extensions</span><span class="pill">MUI</span></div></div>
+      <div class="stack-category"><h3>Mobile Development</h3><div class="stack-row"><span class="pill accent">Flutter</span><span class="pill accent">Dart</span><span class="pill">Java/Android</span><span class="pill">Swift/iOS</span></div></div>
+      <div class="stack-category"><h3>Infrastructure & DevOps</h3><div class="stack-row"><span class="pill accent">Docker</span><span class="pill accent">Kubernetes</span><span class="pill">CI/CD</span><span class="pill">Microservices</span><span class="pill">GCP</span><span class="pill">AWS</span></div></div>
+      <div class="stack-category"><h3>AI & Tooling</h3><div class="stack-row"><span class="pill accent">Claude Code</span><span class="pill accent">BMAD Method</span><span class="pill">LangChain</span><span class="pill">MCP Servers</span><span class="pill">LLM Integration</span><span class="pill">Prompt Engineering</span></div></div>
+      <div class="stack-category"><h3>Data & Databases</h3><div class="stack-row"><span class="pill accent">PostgreSQL</span><span class="pill accent">Redis</span><span class="pill">MySQL</span><span class="pill">BigQuery</span><span class="pill">TypeORM</span></div></div>
+      <div class="stack-category"><h3>Practices & Methodologies</h3><div class="stack-row"><span class="pill accent">Hexagonal Architecture</span><span class="pill accent">Clean Architecture</span><span class="pill">TDD</span><span class="pill">Event-driven Architecture</span><span class="pill">API Design</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ PROJECTS ═══════ -->
+<div class="page" id="page-projects">
+  <div class="container">
+    <div class="page-header">
+      <div class="section-label fade-in"># side projects</div>
+      <h1 class="page-title fade-in">Things I build for fun.</h1>
+      <p class="page-desc fade-in">Personal projects, experiments, and open-source contributions. Everything here started with a "what if I..."</p>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Featured: Roundtable -->
+      <a href="https://github.com/fantoine/claude-roundtable" target="_blank" class="project-card project-featured fade-in">
+        <div>
+          <div class="project-header"><h3>Roundtable</h3><span class="project-status status-active">active</span></div>
+          <p>Turn Claude into a room full of experts. A Claude Code plugin & Desktop extension for multi-persona discussions — get structured disagreement from security experts, architects, and strategists in the same conversation.</p>
+          <div class="project-tags"><span class="tag">TypeScript</span><span class="tag">Claude Code Plugin</span><span class="tag">MCP</span><span class="tag">AI Agents</span></div>
+          <div class="project-link">View on GitHub <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 14 14"><path d="M4 10 10 4m0 0H5m5 0v5"/></svg></div>
+        </div>
+        <div class="project-visual"><div style="text-align:center;line-height:1.6"><span style="font-size:2rem">🎭</span><br><span style="color:var(--blue-light);font-size:.8rem">Multi-agent collaboration</span></div></div>
+      </a>
+
+      <!-- Quick Daily Games -->
+      <div class="project-card fade-in">
+        <div class="project-header"><h3>Quick Daily Games</h3><span class="project-status status-wip">coming soon</span></div>
+        <p>A mobile app bringing the concept of daily mini-games — think LinkedIn puzzles, but with a wider variety of brain teasers and challenges, fresh every day.</p>
+        <div class="project-tags"><span class="tag">Flutter</span><span class="tag">Mobile</span><span class="tag">Games</span></div>
+      </div>
+
+      <!-- Haxe QRCode -->
+      <a href="https://github.com/fantoine/haxe-qrcode" target="_blank" class="project-card fade-in">
+        <div class="project-header"><h3>Haxe QRCode</h3><span class="project-status status-archived">legacy</span></div>
+        <p>A cross-platform QR code generator written in Haxe — compiles to multiple targets including JavaScript, C++, and Neko.</p>
+        <div class="project-tags"><span class="tag">Haxe</span><span class="tag">Cross-platform</span><span class="tag">QR Code</span></div>
+        <div class="project-link">View on GitHub <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 14 14"><path d="M4 10 10 4m0 0H5m5 0v5"/></svg></div>
+      </a>
+
+      <!-- Haxe NodeHX -->
+      <a href="https://github.com/fantoine/haxe-nodehx" target="_blank" class="project-card fade-in">
+        <div class="project-header"><h3>Haxe NodeHX Externs</h3><span class="project-status status-archived">legacy</span></div>
+        <p>A system of typed extern definitions for Node.js in Haxe — similar to DefinitelyTyped for TypeScript. Includes extensions for Connect, MongoDB, SourceMap, and more.</p>
+        <div class="project-tags"><span class="tag">Haxe</span><span class="tag">Node.js</span><span class="tag">Type Definitions</span></div>
+        <div class="project-link">View on GitHub <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 14 14"><path d="M4 10 10 4m0 0H5m5 0v5"/></svg></div>
+      </a>
+
+      <!-- CSRF Route Bundle -->
+      <a href="https://github.com/fantoine/csrf-route-bundle" target="_blank" class="project-card fade-in">
+        <div class="project-header"><h3>CSRF Route Bundle</h3><span class="project-status status-archived">legacy</span></div>
+        <p>A Symfony bundle that adds automatic CSRF token handling to routes — creation, validation, and configuration via route annotations.</p>
+        <div class="project-tags"><span class="tag">PHP</span><span class="tag">Symfony</span><span class="tag">Security</span></div>
+        <div class="project-link">View on GitHub <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 14 14"><path d="M4 10 10 4m0 0H5m5 0v5"/></svg></div>
+      </a>
+
+    </div>
+    <div style="text-align:center;margin-top:2.5rem" class="fade-in">
+      <a href="https://github.com/fantoine?tab=repositories" target="_blank" class="btn btn-secondary">View all repositories on GitHub <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 14 14"><path d="M4 10 10 4m0 0H5m5 0v5"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ BACKGROUND ═══════ -->
+<div class="page" id="page-background">
+  <div class="container">
+    <div class="page-header">
+      <div class="section-label fade-in"># background</div>
+      <h1 class="page-title fade-in">Where I've been.</h1>
+      <p class="page-desc fade-in">From R&D engineering to co-founding startups and leading product & tech organizations.</p>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item current fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">May 2024 → Present</div>
+        <div class="timeline-company">MeltingSpot</div>
+        <div class="timeline-role">CTPO (Chief Technology & Product Officer)</div>
+        <div class="timeline-location">Paris, France · Remote</div>
+        <div class="timeline-desc"><ul>
+          <li>Rebuilt the Product & Tech organization: strategic alignment, cross-team rituals, improved delivery processes.</li>
+          <li>Led a major platform evolution integrating generative AI and advanced in-app learning features, driving significant growth in registered users and engagement.</li>
+          <li>Directed a critical project: full white-label adaptation of the platform for a leading US LMS.</li>
+        </ul><div class="timeline-tech"><span class="tag">TypeScript</span><span class="tag">NestJS</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">GCP</span><span class="tag">Kubernetes</span><span class="tag">LangChain</span></div></div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Mar 2021 → Apr 2024</div>
+        <div class="timeline-company">MeltingSpot</div>
+        <div class="timeline-role">CTO</div>
+        <div class="timeline-location">Paris, France · Remote</div>
+        <div class="timeline-desc"><ul>
+          <li>First technical hire: built a 9-person fully remote full-stack team split into two feature teams.</li>
+          <li>Raised funding to support team and product growth.</li>
+          <li>Designed and launched a complete learning platform: live video, collaborative libraries, real-time messaging, forums.</li>
+          <li>Scaled delivery from 2 manual deployments/week to 5+ fully automated deployments/week with CI/CD.</li>
+        </ul><div class="timeline-tech"><span class="tag">TypeScript</span><span class="tag">NestJS</span><span class="tag">React</span><span class="tag">WebSockets</span><span class="tag">Redis</span><span class="tag">AWS</span><span class="tag">Docker</span></div></div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Mar 2018 → Feb 2021</div>
+        <div class="timeline-company">Total Marketing Digital Solutions</div>
+        <div class="timeline-role">CTO · subsidiary of TotalEnergies</div>
+        <div class="timeline-location">Lyon, France</div>
+        <div class="timeline-desc"><ul>
+          <li>Led the post-acquisition technical transition after TotalEnergies acquired Genedys.</li>
+          <li>Full platform rebuild: transformed a B2B marketplace into a generic multi-country SaaS deployed across TotalEnergies subsidiaries in 4 countries on 3 continents.</li>
+          <li>Built an 8-person engineering team (developers + DevOps).</li>
+          <li>Developed an internal microservices framework standardizing practices.</li>
+        </ul><div class="timeline-tech"><span class="tag">PHP</span><span class="tag">Symfony</span><span class="tag">Go</span><span class="tag">gRPC</span><span class="tag">Angular</span><span class="tag">Kubernetes</span><span class="tag">Azure</span></div></div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">May 2015 → Feb 2018</div>
+        <div class="timeline-company">Genedys</div>
+        <div class="timeline-role">CTO & Co-founder</div>
+        <div class="timeline-location">Lyon, France</div>
+        <div class="timeline-desc"><ul>
+          <li>Co-founded and built an innovative B2B marketplace for bulk fuel procurement.</li>
+          <li>Co-founded alongside MyTinks during a deliberate parallel launch phase — same co-founders, two bets at once.</li>
+          <li>Managed a 4-developer team across India and France.</li>
+          <li>Raised funding to scale the product and team.</li>
+          <li>Successful exit: company acquired by TotalEnergies.</li>
+        </ul><div class="timeline-tech"><span class="tag">PHP</span><span class="tag">Symfony</span><span class="tag">Angular</span><span class="tag">Rust</span><span class="tag">WebSockets</span><span class="tag">MongoDB</span></div></div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Oct 2015 → Dec 2017</div>
+        <div class="timeline-company">MyTinks</div>
+        <div class="timeline-role">CEO, CTO & Co-founder</div>
+        <div class="timeline-location">Lyon, France</div>
+        <div class="timeline-desc"><ul>
+          <li>Created a mobile video-challenge application for the general public.</li>
+          <li>Full development of iOS/Android apps and REST API (video transcoding, streaming).</li>
+          <li>Raised funding to scale the product and team.</li>
+          <li>Project concluded in 2017.</li>
+        </ul><div class="timeline-tech"><span class="tag">Swift</span><span class="tag">Java</span><span class="tag">Node.js</span><span class="tag">Haxe</span><span class="tag">AWS</span></div></div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Jan 2014 → Jun 2015</div>
+        <div class="timeline-company">fantoine.com</div>
+        <div class="timeline-role">Freelance Engineer & Consultant</div>
+        <div class="timeline-location">Valence, France</div>
+        <div class="timeline-desc"><ul>
+          <li>Engineering & consulting missions while preparing the launch of Genedys and MyTinks.</li>
+          <li>Active contributor to the Haxe open-source project and its ecosystem.</li>
+        </ul><div class="timeline-tech"><span class="tag">PHP</span><span class="tag">Symfony</span><span class="tag">Haxe</span><span class="tag">OCaml</span></div></div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Nov 2009 → Dec 2013</div>
+        <div class="timeline-company">Intuitiv Technology</div>
+        <div class="timeline-role">R&D Director</div>
+        <div class="timeline-location">Lyon, France</div>
+        <div class="timeline-desc"><ul>
+          <li>Built a SaaS platform for local authorities (Citizen Relationship Management).</li>
+          <li>Built a 5-developer R&D team across France and Bulgaria.</li>
+          <li>Designed a cross-mobile programming language and secured funding.</li>
+          <li>Supported SMAIO in creating medical simulation software for spinal surgery.</li>
+        </ul><div class="timeline-tech"><span class="tag">C/C++</span><span class="tag">OCaml</span><span class="tag">Haxe</span><span class="tag">PHP</span><span class="tag">Symfony</span></div></div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Jan 2008 → Nov 2011</div>
+        <div class="timeline-company">EMCII</div>
+        <div class="timeline-role">Software Engineer & Co-founder</div>
+        <div class="timeline-location">Lyon, France</div>
+        <div class="timeline-desc"><ul>
+          <li>Co-founded an IT services company during university studies.</li>
+          <li>Delivered 20+ websites for local small businesses.</li>
+        </ul><div class="timeline-tech"><span class="tag">PHP</span><span class="tag">JavaScript</span><span class="tag">Flash</span><span class="tag">C++</span></div></div>
+      </div>
+
+    </div>
+
+    <div class="education-block fade-in">
+      <div class="section-label"># education</div>
+      <div class="education-item">
+        <div class="education-date">2006 → 2011</div>
+        <div class="education-info"><h3>EPSI Lyon</h3><p>Computer Engineer — Software Engineering</p></div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem" class="fade-in">
+      <div class="section-label"># languages</div>
+      <div class="stack-row" style="margin-top:.75rem"><span class="pill accent">French — Native</span><span class="pill accent">English — Fluent (C1)</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ CONTACT ═══════ -->
+<div class="page" id="page-contact">
+  <div class="container">
+    <div class="contact-page">
+      <div class="page-header">
+        <div class="section-label fade-in"># contact</div>
+        <h1 class="page-title fade-in">Let's connect.</h1>
+        <p class="page-desc fade-in">Open to interesting conversations, collaborations, and new challenges.</p>
+      </div>
+      <div class="social-grid fade-in">
+        <a href="https://github.com/fantoine" class="social-link" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/fabienantoine" class="social-link" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://www.twitter.com/fabantoine" class="social-link" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X / Twitter</span>
+        </a>
+        <a href="#" class="social-link" id="email-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.5-9.75-6.5"/></svg>
+          <span id="email-text"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://github.com/fantoine" target="_blank" class="footer-icon" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+      <a href="https://linkedin.com/in/fabienantoine" target="_blank" class="footer-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://www.twitter.com/fabantoine" target="_blank" class="footer-icon" aria-label="X / Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="#" class="footer-icon" id="footer-email-link" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.5-9.75-6.5"/></svg></a>
+    </div>
+    <p>Crafted by <span class="grad">Fabien Antoine</span> · © 2026</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
