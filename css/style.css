@@ -112,6 +112,8 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .timeline-role{color:var(--blue-light);font-size:.9rem;font-weight:500;margin-bottom:.5rem}
 .timeline-location{font-size:.8rem;color:var(--text-tertiary);margin-bottom:.75rem;font-family:var(--font-mono)}
 .timeline-desc{color:var(--text-secondary);font-size:.9rem;line-height:1.7}
+.timeline-desc a{color:var(--blue-light);text-decoration:none;border-bottom:1px solid rgba(43,138,191,.3);transition:border-color .3s}
+.timeline-desc a:hover{border-color:var(--blue-light)}
 .timeline-desc ul{list-style:none;padding:0}
 .timeline-desc li{margin-bottom:.35rem;padding-left:.25rem}
 .timeline-desc li::before{content:'\2192';color:var(--blue);margin-right:.5rem;font-size:.8rem}
