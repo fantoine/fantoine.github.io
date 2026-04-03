@@ -150,5 +150,6 @@ footer .grad{background:var(--gradient-main);-webkit-background-clip:text;-webki
   .nav-links.open{display:flex}
   .hamburger{display:block}
   .timeline{padding-left:1.5rem}
+  .timeline-dot{left:-1.5rem}
 }
 @media(max-width:480px){.container{padding:0 1.25rem}.hero-cta{flex-direction:column}}
