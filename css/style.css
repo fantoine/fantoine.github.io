@@ -92,7 +92,8 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .status-archived{background:rgba(80,90,112,.12);color:var(--text-tertiary);border:1px solid rgba(80,90,112,.15)}
 .project-card p{color:var(--text-secondary);font-size:.9rem;margin-bottom:1.25rem;line-height:1.65}
 .project-tags{display:flex;flex-wrap:wrap;gap:.4rem}
-.tag{font-family:var(--font-mono);font-size:.7rem;padding:.2rem .55rem;border-radius:6px;background:rgba(43,138,191,.06);color:var(--text-tertiary);border:1px solid rgba(43,138,191,.08)}
+.tag{font-family:var(--font-mono);font-size:.7rem;padding:.2rem .55rem;border-radius:6px;background:rgba(43,138,191,.06);color:var(--text-tertiary);border:1px solid rgba(43,138,191,.08);transition:all .3s}
+.tag:hover{border-color:var(--blue);color:var(--blue-light);background:rgba(43,138,191,.12)}
 .project-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;font-size:.85rem;color:var(--blue-light);font-weight:500}
 .project-link svg{transition:transform .3s}
 .project-card:hover .project-link svg{transform:translateX(4px)}
@@ -107,6 +108,8 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .timeline-dot{position:absolute;left:-2rem;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid var(--blue);background:var(--bg-deep);transform:translateX(-5px);z-index:2;transition:all .3s}
 .timeline-item:hover .timeline-dot{background:var(--blue);box-shadow:0 0 12px rgba(43,138,191,.5)}
 .timeline-item.current .timeline-dot{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 12px rgba(56,217,217,.4)}
+.timeline-role-block{margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border-subtle)}
+.timeline-role-block:last-of-type{border-bottom:none;padding-bottom:0}
 .timeline-date{font-family:var(--font-mono);font-size:.75rem;color:var(--text-tertiary);margin-bottom:.35rem}
 .timeline-company{font-family:var(--font-display);font-size:1.15rem;font-weight:600;margin-bottom:.15rem}
 .timeline-role{color:var(--blue-light);font-size:.9rem;font-weight:500;margin-bottom:.5rem}
