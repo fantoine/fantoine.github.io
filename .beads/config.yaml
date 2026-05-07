@@ -1,5 +1,5 @@
-issue_prefix: co
-issue-prefix: co
+issue_prefix: fa
+issue-prefix: fa
 dolt.auto-start: false
 gc.endpoint_origin: inherited_city
 gc.endpoint_status: verified
