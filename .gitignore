@@ -8,3 +8,7 @@
 .beads/*
 !.beads/config.yaml
 !.beads/metadata.json
+
+# Claude Code
+.claude/settings.local.json
+.claude/skills/
