@@ -12,6 +12,21 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="FabienAntoine" />
 <link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" id="theme-color" content="#07080D">
+<script>
+/* Dark is the default for everyone; light only ever comes from an explicit
+   choice. Applied before first paint because app.js runs at the end of <body>,
+   which would flash dark at a visitor who picked light. */
+(function(){
+  try{
+    if(localStorage.getItem('theme')==='light'){
+      document.documentElement.setAttribute('data-theme','light');
+      var m=document.getElementById('theme-color');
+      if(m)m.setAttribute('content','#F2F6FB');
+    }
+  }catch(e){}
+})();
+</script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,7 +36,6 @@
 <nav>
   <div class="container">
     <a class="nav-logo" data-nav="home">fabien<em>antoine</em></a>
-    <button class="hamburger" id="burger"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     <ul class="nav-links" id="navLinks">
       <li><a data-nav="home">Home</a></li>
       <li><a data-nav="about">About</a></li>
@@ -29,6 +43,14 @@
       <li><a data-nav="background">Background</a></li>
       <li><a data-nav="contact">Contact</a></li>
     </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        <span class="knob"></span>
+      </button>
+      <button class="hamburger" id="burger" type="button" aria-label="Navigation" aria-expanded="false"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
   </div>
 </nav>
 

@@ -13,8 +13,7 @@
     document.querySelectorAll('.nav-links a').forEach(function (a) {
       a.classList.toggle('active', a.getAttribute('data-nav') === id);
     });
-    var menu = document.getElementById('navLinks');
-    if (menu) menu.classList.remove('open');
+    setMenu(false);
     var items = el.querySelectorAll('.fade-in');
     for (var i = 0; i < items.length; i++) {
       (function (item, delay) {
@@ -23,6 +22,13 @@
         }, delay);
       })(items[i], i * 70 + 50);
     }
+  }
+
+  function setMenu(open) {
+    var menu = document.getElementById('navLinks');
+    var burger = document.getElementById('burger');
+    if (menu) menu.classList.toggle('open', open);
+    if (burger) burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
 
   function navigate(id) {
@@ -49,8 +55,39 @@
   });
 
   document.getElementById('burger').addEventListener('click', function () {
-    document.getElementById('navLinks').classList.toggle('open');
+    var menu = document.getElementById('navLinks');
+    setMenu(!(menu && menu.classList.contains('open')));
   });
+
+  // Theme: dark for everyone, light only on an explicit choice
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var themeMeta = document.getElementById('theme-color');
+  var THEME_COLOR = { light: '#F2F6FB', dark: '#07080D' };
+
+  function storedTheme() {
+    try { return localStorage.getItem('theme'); } catch (e) { return null; }
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') root.setAttribute('data-theme', 'light');
+    else root.removeAttribute('data-theme');
+    if (themeMeta) themeMeta.setAttribute('content', THEME_COLOR[theme]);
+    if (toggle) {
+      toggle.setAttribute('aria-checked', theme === 'light' ? 'true' : 'false');
+      toggle.setAttribute('aria-label', theme === 'light' ? 'Dark mode' : 'Light mode');
+    }
+  }
+
+  applyTheme(storedTheme() === 'light' ? 'light' : 'dark');
+
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      applyTheme(next);
+    });
+  }
 
   // Email obfuscation
   var u = 'hello';
