@@ -50,6 +50,23 @@
     }
   });
 
+  // Inline links nested inside clickable cards
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-href]');
+    if (!t) return;
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(t.getAttribute('data-href'), '_blank', 'noopener');
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var t = e.target.closest('[data-href]');
+    if (!t) return;
+    e.preventDefault();
+    window.open(t.getAttribute('data-href'), '_blank', 'noopener');
+  });
+
   window.addEventListener('hashchange', function () {
     go(getPageFromHash());
   });

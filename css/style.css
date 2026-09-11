@@ -132,6 +132,8 @@ html:not([data-theme="light"]) .theme-toggle .knob{transform:translateX(21px)}
 .status-wip{background:var(--amber-bg);color:var(--amber-text);border:1px solid var(--amber-border)}
 .status-archived{background:var(--arch-bg);color:var(--text-tertiary);border:1px solid var(--arch-border)}
 .project-card p{color:var(--text-secondary);font-size:.9rem;margin-bottom:1.25rem;line-height:1.65}
+.project-card p .inline-link{color:var(--blue-light);cursor:pointer;border-bottom:1px solid rgba(43,138,191,.3);transition:border-color .3s}
+.project-card p .inline-link:hover,.project-card p .inline-link:focus-visible{border-color:var(--blue-light)}
 .project-tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .tag{font-family:var(--font-mono);font-size:.7rem;padding:.2rem .55rem;border-radius:6px;background:rgba(43,138,191,.06);color:var(--text-tertiary);border:1px solid rgba(43,138,191,.08);transition:all .3s}
 .tag:hover{border-color:var(--blue);color:var(--blue-light);background:rgba(43,138,191,.12)}
