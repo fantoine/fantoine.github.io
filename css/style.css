@@ -1,9 +1,19 @@
+/* Self-hosted so the first paint waits on nothing but this stylesheet.
+   One variable file per family and subset: the weight axis covers every
+   weight the design uses, so extra weights cost no extra bytes. */
+@font-face{font-family:'Sora';font-style:normal;font-weight:500 700;font-display:swap;src:url(../fonts/sora-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Sora';font-style:normal;font-weight:500 700;font-display:swap;src:url(../fonts/sora-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url(../fonts/dm-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url(../fonts/dm-sans-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(../fonts/jetbrains-mono-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(../fonts/jetbrains-mono-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --blue:#2B8ABF;--blue-light:#4AABDF;--blue-dark:#1A6A9A;
   --cyan:#38D9D9;--violet:#7B6BF5;
   --bg-deep:#07080D;--bg-card:#0D0F17;--bg-surface:#151825;
-  --text-primary:#E8ECF4;--text-secondary:#8892A8;--text-tertiary:#505A70;
+  --text-primary:#E8ECF4;--text-secondary:#8892A8;--text-tertiary:#78819A;
   --border-subtle:rgba(43,138,191,0.12);--border-hover:rgba(43,138,191,0.25);
   --glow-blue:0 0 60px rgba(43,138,191,0.15);
   --gradient-main:linear-gradient(135deg,var(--blue) 0%,var(--cyan) 100%);
@@ -24,7 +34,7 @@
 html[data-theme="light"]{
   --blue-light:#1F7CB0;--blue-ink:var(--blue-dark);
   --bg-deep:#F2F6FB;--bg-card:#FFFFFF;--bg-surface:#E7EEF7;
-  --text-primary:#0F1729;--text-secondary:#4A5670;--text-tertiary:#8592AB;
+  --text-primary:#0F1729;--text-secondary:#4A5670;--text-tertiary:#576275;
   --border-subtle:rgba(43,138,191,0.18);--border-hover:rgba(43,138,191,0.42);
   --glow-blue:0 10px 28px rgba(26,106,154,0.09);
   --nav-bg:rgba(242,246,251,0.82);--nav-bg-mobile:#F2F6FB;
@@ -70,12 +80,24 @@ html:not([data-theme="light"]) .theme-toggle .knob{transform:translateX(21px)}
 @media(prefers-reduced-motion:reduce){.theme-toggle .knob{transition:none}}
 
 /* Pages */
+/* The <main> landmark sits between body and the pages, so it has to pass the
+   column flex context along for .page.active to keep filling the viewport. */
+main{display:flex;flex-direction:column;flex:1}
 .page{display:none;padding-top:64px;padding-bottom:4rem;flex:1}
 .page.active{display:flex;flex-direction:column}
 
 /* Fade */
 .fade-in{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
 .fade-in.show{opacity:1;transform:translateY(0)}
+/* The home hero reveals from CSS alone. app.js is deferred, so waiting for it
+   to add .show held the largest element at opacity 0 for seconds. The other
+   pages are only reachable after app.js has run, so they still stagger in JS. */
+#page-home .fade-in{animation:reveal .5s ease both}
+#page-home .fade-in:nth-child(2){animation-delay:.07s}
+#page-home .fade-in:nth-child(3){animation-delay:.14s}
+#page-home .fade-in:nth-child(4){animation-delay:.21s}
+@keyframes reveal{to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.fade-in{transition:none}#page-home .fade-in{animation:none;opacity:1;transform:none}}
 
 /* Hero */
 .hero{flex:1;display:flex;align-items:center}
